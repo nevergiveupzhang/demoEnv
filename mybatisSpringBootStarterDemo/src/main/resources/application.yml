@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+logging:
+  file: application.log
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+
+customPath: custom
+randomValue: ${random.uuid}
