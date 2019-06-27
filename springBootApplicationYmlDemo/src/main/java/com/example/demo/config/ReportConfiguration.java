@@ -1,7 +1,6 @@
 package com.example.demo.config;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -9,13 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix="report")
 public class ReportConfiguration {
-	private Map<String, Map<String, Map<String, String[]>>> config;
+	private List<IndexConfigModel> indexes;
 
-	public Map<String, Map<String, Map<String, String[]>>> getConfig() {
-		return config;
+	public List<IndexConfigModel> getIndexes() {
+		return indexes;
 	}
 
-	public void setConfig(Map<String, Map<String, Map<String, String[]>>> config) {
-		this.config = config;
+	public void setIndexes(List<IndexConfigModel> indexes) {
+		this.indexes = indexes;
 	}
 }

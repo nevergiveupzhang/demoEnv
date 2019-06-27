@@ -5,5 +5,5 @@ import java.util.List;
 import com.tony.demo.bean.User;
 
 public interface IUserService {
-	List<User> getAllUser();
+	List<User> getUsers(String username, String age);
 }

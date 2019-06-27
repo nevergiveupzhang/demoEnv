@@ -1,0 +1,35 @@
+2019-06-21 11:41:02.297  INFO 15103 --- [restartedMain] c.e.d.MainApplication                    : Starting MainApplication on zhangtao with PID 15103 (/home/zhangt/workspace/JavaWorkspace/demoEnv/springBootDemo/target/classes started by zhangt in /home/zhangt/workspace/JavaWorkspace/demoEnv/springBootDemo)
+2019-06-21 11:41:02.305  INFO 15103 --- [restartedMain] c.e.d.MainApplication                    : No active profile set, falling back to default profiles: default
+2019-06-21 11:41:02.371  INFO 15103 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45790042: startup date [Fri Jun 21 11:41:02 CST 2019]; root of context hierarchy
+2019-06-21 11:41:03.916  INFO 15103 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-06-21 11:41:03.945  INFO 15103 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-06-21 11:41:03.946  INFO 15103 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-06-21 11:41:03.955  INFO 15103 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-06-21 11:41:04.122  INFO 15103 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-06-21 11:41:04.123  INFO 15103 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1755 ms
+2019-06-21 11:41:04.187  INFO 15103 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2019-06-21 11:41:04.192  INFO 15103 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-21 11:41:04.193  INFO 15103 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-21 11:41:04.194  INFO 15103 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-21 11:41:04.194  INFO 15103 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-21 11:41:04.380  INFO 15103 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-21 11:41:04.582  INFO 15103 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45790042: startup date [Fri Jun 21 11:41:02 CST 2019]; root of context hierarchy
+2019-06-21 11:41:04.686  INFO 15103 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-21 11:41:04.691  INFO 15103 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-21 11:41:04.724  INFO 15103 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-21 11:41:04.724  INFO 15103 --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-21 11:41:04.886  INFO 15103 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-21 11:41:04.913  INFO 15103 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-21 11:41:04.927  INFO 15103 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-06-21 11:41:04.980  INFO 15103 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-21 11:41:04.985  INFO 15103 --- [restartedMain] c.e.d.MainApplication                    : Started MainApplication in 3.337 seconds (JVM running for 4.094)
+2019-06-21 11:41:05.001  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : task->0/5 * * * * ?
+2019-06-21 11:41:05.002  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : /home/zhangt/workspace/JavaWorkspace/demoEnv
+2019-06-21 11:41:10.000  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : task->0/5 * * * * ?
+2019-06-21 11:41:10.001  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : /home/zhangt/workspace/JavaWorkspace/demoEnv
+2019-06-21 11:41:15.000  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : task->0/5 * * * * ?
+2019-06-21 11:41:15.000  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : /home/zhangt/workspace/JavaWorkspace/demoEnv
+2019-06-21 11:41:20.000  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : task->0/5 * * * * ?
+2019-06-21 11:41:20.000  INFO 15103 --- [pool-2-thread-1] c.e.d.s.SchedulingDemo                   : /home/zhangt/workspace/JavaWorkspace/demoEnv
+2019-06-21 11:41:21.939  INFO 15103 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45790042: startup date [Fri Jun 21 11:41:02 CST 2019]; root of context hierarchy
+2019-06-21 11:41:21.944  INFO 15103 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

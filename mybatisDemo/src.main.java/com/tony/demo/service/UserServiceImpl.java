@@ -13,8 +13,10 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
 	private UserMapper userMapper;
 
-	public List<User> getAllUser() {
-		return userMapper.getAllUser();
+	@Override
+	public List<User> getUsers(String username, String age) {
+		return userMapper.getUsers(username,age);
 	}
+	
  
 }

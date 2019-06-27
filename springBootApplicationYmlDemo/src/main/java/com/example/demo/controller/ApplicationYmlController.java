@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.demo.config.Bar;
 import com.example.demo.config.ReportConfiguration;
 import com.example.demo.util.DataUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;

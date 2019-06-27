@@ -12,7 +12,7 @@ public class MybatisScannerConfig {
 	@Bean
 	public MapperScannerConfigurer mapperScannerConfigurer() {
 		MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-		mapperScannerConfigurer.setBasePackage("com.example.demo.mapper");
+		mapperScannerConfigurer.setBasePackage("com.tony.demo.mapper");
 		return mapperScannerConfigurer;
 	}
 }
