@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.config.model;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix="report")
-public class ReportConfiguration {
+public class ReportApplicationConfigModel {
 	private List<IndexConfigModel> indexes;
 
 	public List<IndexConfigModel> getIndexes() {

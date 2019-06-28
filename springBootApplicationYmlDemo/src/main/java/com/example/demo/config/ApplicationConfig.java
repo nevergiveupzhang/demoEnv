@@ -13,7 +13,7 @@ public class ApplicationConfig {
 		PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
 		YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
 //		yaml.setResources(new FileSystemResource("report.yml"));//File引入
-		yaml.setResources(new ClassPathResource("report.yml"));//class引入
+		yaml.setResources(new ClassPathResource("report.yml"),new ClassPathResource("map.yml"));//class引入
 		configurer.setProperties(yaml.getObject());
 		return configurer;
 	}

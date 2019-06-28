@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import redis.clients.jedis.Jedis;
 
 @Controller
-public class UserController {
+@RequestMapping("/jedis")
+public class JedisUserController {
 	@RequestMapping(value = "/createUser1", method = RequestMethod.GET)
 	public String createUser1(HttpServletRequest request) {
 		String username = request.getParameter("username");
