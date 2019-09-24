@@ -13,13 +13,11 @@ public class MainApplication {
 	@Bean
 	public User userBean() {
 		User user=new User();
-		user.setId(1);
 		user.setName("zhangsan");
 		return user;
 	}
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context =SpringApplication.run(MainApplication.class, args);
 		User user=context.getBean(User.class);
-		System.out.println(user);
 	}
 }

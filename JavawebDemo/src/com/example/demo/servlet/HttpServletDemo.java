@@ -39,4 +39,8 @@ public class HttpServletDemo extends HttpServlet {
 		out.flush();
 		out.close();
 	}
+	
+	public void init() {
+		System.out.println("servlet init");
+	}
 }

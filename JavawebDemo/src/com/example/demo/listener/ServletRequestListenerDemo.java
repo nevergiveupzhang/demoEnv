@@ -9,13 +9,13 @@ public class ServletRequestListenerDemo implements ServletRequestListener{
 
 	@Override
 	public void requestDestroyed(ServletRequestEvent sre) {
-		System.out.println("request destroyed");
+		System.out.println("request listener destroyed");
 		
 	}
 
 	@Override
 	public void requestInitialized(ServletRequestEvent sre) {
-		System.out.println("request init");
+		System.out.println("request listener init");
 	}
 
 }

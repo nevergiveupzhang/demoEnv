@@ -1,11 +1,16 @@
 package com.tony.demo.mapper;
 
 import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
+import java.util.Map;
 
 import com.tony.demo.bean.User;
 
 public interface UserMapper {
-	List<User> getUsers(@Param("username") String username, @Param("age") String age);
+	User getById(int id);
+
+	List<User> getAll();
+
+	void createUser(User user);
+
+	List<User> getUsers(Map<String, Object> params);
 }

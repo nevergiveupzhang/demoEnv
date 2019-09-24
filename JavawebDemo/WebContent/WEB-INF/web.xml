@@ -8,43 +8,45 @@
 		<param-name>customContextParam</param-name>
 		<param-value>classpath:spring-mybatis.xml</param-value>
 	</context-param>
-	
-	
-<!-- 	<listener> -->
-<!-- 		<listener-class>com.example.demo.listener.ServletContextListenerDemo</listener-class> -->
-<!-- 	</listener> -->
-<!-- 	<listener> -->
-<!-- 		<listener-class>com.example.demo.listener.ServletRequestListenerDemo</listener-class> -->
-<!-- 	</listener> -->
-<!-- 	<listener> -->
-<!-- 		<listener-class>com.example.demo.listener.HttpSessionListenerDemo</listener-class> -->
-<!-- 	</listener> -->
-<!-- 	<listener> -->
-<!-- 		<listener-class>com.example.demo.listener.HttpSessionAttributeListenerDemo</listener-class> -->
-<!-- 	</listener> -->
 
-<!-- 	<filter> -->
-<!-- 		<filter-name>TestFilter2</filter-name> -->
-<!-- 		<filter-class>com.example.demo.filter.TestFilter2</filter-class> -->
-<!-- 	</filter> -->
-<!-- 	<filter> -->
-<!-- 		<filter-name>TestFilter</filter-name> -->
-<!-- 		<filter-class>com.example.demo.filter.TestFilter</filter-class> -->
-<!-- 	</filter> -->
-	
-<!--   <filter-mapping> -->
-<!--       <filter-name>TestFilter2</filter-name> -->
-<!--       <url-pattern>/test</url-pattern> -->
-<!--   </filter-mapping> -->
-<!--   <filter-mapping> -->
-<!--       <filter-name>TestFilter</filter-name> -->
-<!--       <url-pattern>/test</url-pattern> -->
-<!--   </filter-mapping> -->
-  
-  
+	<!-- <listener> -->
+	<!-- <listener-class>com.example.demo.listener.ServletContextListenerDemo2</listener-class> -->
+	<!-- </listener> -->
+	<listener>
+		<listener-class>com.example.demo.listener.ServletContextListenerDemo</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.example.demo.listener.ServletRequestListenerDemo</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.example.demo.listener.HttpSessionListenerDemo</listener-class>
+	</listener>
+	<!-- <listener> -->
+	<!-- <listener-class>com.example.demo.listener.HttpSessionAttributeListenerDemo</listener-class> -->
+	<!-- </listener> -->
+
+	<!-- <filter> -->
+	<!-- <filter-name>TestFilter2</filter-name> -->
+	<!-- <filter-class>com.example.demo.filter.TestFilter2</filter-class> -->
+	<!-- </filter> -->
+	<filter>
+		<filter-name>TestFilter</filter-name>
+		<filter-class>com.example.demo.filter.TestFilter</filter-class>
+	</filter>
+
+	<!-- <filter-mapping> -->
+	<!-- <filter-name>TestFilter2</filter-name> -->
+	<!-- <url-pattern>/test</url-pattern> -->
+	<!-- </filter-mapping> -->
+	<filter-mapping>
+		<filter-name>TestFilter</filter-name>
+		<url-pattern>/test</url-pattern>
+	</filter-mapping>
 	<servlet>
 		<servlet-name>HttpServletDemo</servlet-name>
 		<servlet-class>com.example.demo.servlet.HttpServletDemo</servlet-class>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>HttpServletDemo</servlet-name>

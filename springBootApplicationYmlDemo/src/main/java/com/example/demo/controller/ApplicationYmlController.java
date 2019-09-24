@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.config.model.MapApplicationConfigModel;
 import com.example.demo.config.model.ReportApplicationConfigModel;
+import com.example.demo.util.ApplicationContextManager;
 import com.example.demo.util.DataUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
@@ -18,8 +19,6 @@ public class ApplicationYmlController {
 	private ReportApplicationConfigModel config;
 	@Autowired
 	private MapApplicationConfigModel mapConfig;
-	@Value("${name}")
-	private String name;
 	@RequestMapping("/")
 	@ResponseBody
 	public String index() throws JsonProcessingException {
@@ -33,6 +32,11 @@ public class ApplicationYmlController {
 		System.out.println(DataUtil.toJsonStr(mapConfig));
 		return DataUtil.toJsonStr(mapConfig);
 	}
-	
+	@RequestMapping("/context")
+	@ResponseBody
+	public String context() throws JsonProcessingException {
+		ApplicationYmlController bean=ApplicationContextManager.getServiceByName("applicationYmlController", ApplicationYmlController.class);
+		return DataUtil.toJsonStr(bean.mapConfig);
+	}
 	
 }
