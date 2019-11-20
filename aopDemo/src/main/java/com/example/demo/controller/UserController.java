@@ -16,8 +16,8 @@ public class UserController {
 	
 	@RequestMapping("login")
 	@ResponseBody
-	public String login(@RequestParam String userName,@RequestParam String password) {
-		userService.aTestLogin(userName,password);
+	public String login(@RequestParam String userName) {
+		userService.login(userName);
 		return "success";
 	}
 	

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class LogAdvice {
-	@Before("execution(* com.example.demo.service.*.*Test*(..))")
+	@Before("execution(* com.example.demo.mapper.*.*(..))")
 	public void add(JoinPoint join) {
 		Object[] args =join.getArgs();
 		for(Object obj:args) {

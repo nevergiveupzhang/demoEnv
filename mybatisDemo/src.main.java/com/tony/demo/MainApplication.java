@@ -2,6 +2,7 @@ package com.tony.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import com.tony.demo.bean.User;
 @ComponentScan(basePackages = "com.tony.demo")
 @SpringBootApplication
+@EnableCaching
 public class MainApplication {
 	@Bean
 	public User userBean() {

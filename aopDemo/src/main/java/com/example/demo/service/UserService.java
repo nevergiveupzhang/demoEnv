@@ -1,16 +1,18 @@
 package com.example.demo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.mapper.UserMapper;
+import com.example.demo.po.User;
 
 @Service
 public class UserService {
-
-	public void login(String userName, String password) {
-		System.out.println("login");
-	}
+	@Autowired
+	private UserMapper userMapper;
 	
-	public void aTestLogin(String userName, String password) {
-		System.out.println("aTestLogin");
+	public void login(String userName) {
+		userMapper.create(new User(userName));
 	}
 
 }

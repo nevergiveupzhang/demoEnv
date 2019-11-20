@@ -13,4 +13,6 @@ public interface UserMapper {
 	void createUser(User user);
 
 	List<User> getUsers(Map<String, Object> params);
+
+	void batchInsert(List<User> users);
 }

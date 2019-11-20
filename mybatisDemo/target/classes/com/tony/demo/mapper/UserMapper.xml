@@ -25,4 +25,13 @@
 	<insert id="createUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.tony.demo.bean.User">
 		insert into user(name,age) values(#{name},#{age});
 	</insert>
+	
+	<insert id="batchInsert" 
+		parameterType="java.util.List">
+		insert into user(name,age)
+		values
+		<foreach collection="list" item="user" separator=",">
+			(#{user.name},#{user.age})
+		</foreach>
+	</insert>
 </mapper>

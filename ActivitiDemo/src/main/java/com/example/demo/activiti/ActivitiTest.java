@@ -46,7 +46,7 @@ public class ActivitiTest {
 	}
 	public static void main(String[] args) {
 		initEngine();
-		startProcessInstance("myProcess:3:20004");
+//		startProcessInstance("myProcess:3:20004");
 //		testQingjia("15005");
 	}
 
