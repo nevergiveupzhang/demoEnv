@@ -16,4 +16,11 @@ public class Student implements Person {
         }
        System.out.println(name + "上交班费50元");
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

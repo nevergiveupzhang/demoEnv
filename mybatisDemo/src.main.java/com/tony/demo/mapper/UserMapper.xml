@@ -34,4 +34,8 @@
 			(#{user.name},#{user.age})
 		</foreach>
 	</insert>
+	
+	<insert id="createView" parameterType="java.lang.String">
+		${sql}
+	</insert>
 </mapper>

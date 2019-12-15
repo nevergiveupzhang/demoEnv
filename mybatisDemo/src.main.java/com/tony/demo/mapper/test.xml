@@ -1,9 +1,0 @@
-<table>
-	<basic-table>
-		a,b,c
-	</basic-table>
-	<relation-table>
-		<element name="" ref-table="" ref-id=""/>
-		<element name="" ref-table="" ref-id=""/>
-	</relation-table>
-</table>

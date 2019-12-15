@@ -20,8 +20,8 @@
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@Controller注解的类是控制器 -->
 	<context:component-scan base-package="com.example.demo" />
 
-	<aop:aspectj-autoproxy/>
-
+	<aop:aspectj-autoproxy expose-proxy="true"/>
+	
 	<!-- loading configure properties file -->
 	<context:property-placeholder order="1"
 		location="classpath:jdbc.properties" />

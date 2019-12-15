@@ -137,4 +137,12 @@ public class UserController {
 		long end =System.currentTimeMillis();
 		return String.valueOf(end-start);
 	}
+	
+	@RequestMapping("createView")
+	@ResponseBody
+	public String createView() {
+		userService.createView();
+		return "success";
+		
+	}
 }

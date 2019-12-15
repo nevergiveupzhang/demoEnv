@@ -36,5 +36,16 @@ public class UserService  {
 		userMapper.batchInsert(users);
 	}
 	
- 
+	public void createView() {
+		String sql="CREATE VIEW item_view AS SELECT mi.resource_id,\r\n" + 
+				"CONVERT(MAX(CASE rt.fieldname_en WHEN 'Title' THEN mi.text_value END),CHAR(50)) AS Title,\r\n" + 
+				"CONVERT(MAX(CASE rt.fieldname_en WHEN 'Year' THEN mi.text_value END),UNSIGNED) AS YEAR,\r\n" + 
+				"MAX(CASE rt.fieldname_en WHEN 'Title_alt' THEN mi.text_value END) AS Title_alt,\r\n" + 
+				"MAX(CASE rt.fieldname_en WHEN 'Author' THEN mi.text_value END) AS Author,\r\n" + 
+				"MAX(CASE rt.fieldname_en WHEN 'Affiliation' THEN mi.text_value END) AS Affiliation,\r\n" + 
+				"MAX(CASE rt.fieldname_en WHEN 'Journal_en' THEN mi.text_value END) AS Journal_en\r\n" + 
+				"FROM resource_template rt JOIN metadata_item mi ON rt.metadata_field_id = mi.metadata_field_id WHERE rt.resource_type_id=2 AND rt.contenttype_id=1\r\n" + 
+				"GROUP BY mi.resource_id";
+		userMapper.createView(sql);
+	}
 }

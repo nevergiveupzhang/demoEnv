@@ -20,5 +20,4 @@ public class UserController {
 		userService.login(userName);
 		return "success";
 	}
-	
 }
