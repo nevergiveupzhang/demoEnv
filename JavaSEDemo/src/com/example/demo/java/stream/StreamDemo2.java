@@ -22,13 +22,13 @@ public class StreamDemo2 {
 	}
 	public static void main(String[] args) {
 		List<User> users=new ArrayList<User>();
-		User u1=new User(1);
+		User u1=new User(100);
 		User u2=new User(1);
 		User u3=new User(2);
 		users.add(u1);
 		users.add(u2);
 		users.add(u3);
-		String result=users.stream().map(u->String.valueOf(u.getId())).distinct().collect(Collectors.joining(",","[","]"));
+		String result=users.stream().map(u->u.getId()).distinct().sorted().map(id->String.valueOf(id)).distinct().collect(Collectors.joining(",","[","]"));
 		System.out.println(result);
 	}
 }

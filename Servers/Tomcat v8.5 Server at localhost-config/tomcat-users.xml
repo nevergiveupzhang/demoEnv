@@ -37,18 +37,4 @@
   <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
   <user username="role1" password="<must-be-changed>" roles="role1"/>
 -->
-<role rolename="admin-gui"/>
-
-<role rolename="admin-script"/>
-
-<role rolename="manager-gui"/>
-
-<role rolename="manager-script"/>
-
-<role rolename="manager-jmx"/>
-
-<role rolename="manager-status"/>
-
-<user password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui" username="admin"/>
-
 </tomcat-users>

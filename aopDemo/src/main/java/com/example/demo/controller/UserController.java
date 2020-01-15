@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +18,7 @@ public class UserController {
 	
 	@RequestMapping("login")
 	@ResponseBody
-	public String login(@RequestParam String userName) {
+	public String login(@RequestParam String userName,HttpServletRequest req) {
 		userService.login(userName);
 		return "success";
 	}
