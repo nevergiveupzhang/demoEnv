@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <project
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jasig.cas</groupId>
 	<artifactId>casServerDemo</artifactId>
@@ -365,6 +364,11 @@
 			<version>${bouncyCastleVersion}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.jasig.cas</groupId>
+			<artifactId>cas-server-support-generic-remote-webflow</artifactId>
+			<version>${cas.version}</version>
+		</dependency>
 	</dependencies>
 
 	<properties>

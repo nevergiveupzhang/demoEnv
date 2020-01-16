@@ -19,7 +19,7 @@
 	<util:map id="authenticationHandlersResolvers">
 		<entry key-ref="proxyAuthenticationHandler"
 			value-ref="proxyPrincipalResolver" />
-		<entry key-ref="primaryAuthenticationHandler"
+		<entry key-ref="testAuthenticationHandler"
 			value-ref="primaryPrincipalResolver" />
 	</util:map>
 
@@ -34,10 +34,13 @@
 
 	<!-- <alias name="acceptUsersAuthenticationHandler" alias="primaryAuthenticationHandler" 
 		/> -->
+		
+	<alias name="remoteAddressAuthenticationHandler" alias="primaryAuthenticationHandler" />
+	
 	<alias name="personDirectoryPrincipalResolver"
 		alias="primaryPrincipalResolver" />
 
-	<bean id="primaryAuthenticationHandler"
+	<bean id="testAuthenticationHandler"
 		class="com.example.demo.service.TestQueryAndEncodeDatabaseAuthenticationHandler"
 		p:dataSource-ref="dataSource"
 		p:sql="SELECT * FROM USER WHERE USERNAME=? AND PASSWORD=?" />
