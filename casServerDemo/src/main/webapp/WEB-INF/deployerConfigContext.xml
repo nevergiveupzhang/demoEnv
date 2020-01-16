@@ -19,8 +19,11 @@
 	<util:map id="authenticationHandlersResolvers">
 		<entry key-ref="proxyAuthenticationHandler"
 			value-ref="proxyPrincipalResolver" />
-		<entry key-ref="testAuthenticationHandler"
+		<entry key-ref="anyAuthenticationHandler"
 			value-ref="primaryPrincipalResolver" />
+		<entry key-ref="dbAuthenticationHandler"
+			value-ref="primaryPrincipalResolver" />
+		
 	</util:map>
 
 	<util:list id="authenticationMetadataPopulators">
@@ -35,16 +38,18 @@
 	<!-- <alias name="acceptUsersAuthenticationHandler" alias="primaryAuthenticationHandler" 
 		/> -->
 		
-	<alias name="remoteAddressAuthenticationHandler" alias="primaryAuthenticationHandler" />
-	
 	<alias name="personDirectoryPrincipalResolver"
 		alias="primaryPrincipalResolver" />
 
-	<bean id="testAuthenticationHandler"
+	<bean id="dbAuthenticationHandler"
 		class="com.example.demo.service.TestQueryAndEncodeDatabaseAuthenticationHandler"
 		p:dataSource-ref="dataSource"
 		p:sql="SELECT * FROM USER WHERE USERNAME=? AND PASSWORD=?" />
 		
+	<bean id="anyAuthenticationHandler" class="com.example.demo.service.AnyAuthenticationPolicyHandler"/>
+		
+	<!-- <alias name="anyAuthenticationPolicy" alias="authenticationPolicy" /> -->
+	
 	<alias name="dataSource" alias="queryEncodeDatabaseDataSource" />
 
 	<bean id="dataSource"

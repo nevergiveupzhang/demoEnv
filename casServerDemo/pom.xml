@@ -365,10 +365,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.jasig.cas</groupId>
-			<artifactId>cas-server-support-generic-remote-webflow</artifactId>
-			<version>${cas.version}</version>
-		</dependency>
+    <groupId>org.jasig.cas</groupId>
+    <artifactId>cas-server-support-rest</artifactId>
+    <version>${cas.version}</version>
+    <scope>runtime</scope>
+</dependency>
 	</dependencies>
 
 	<properties>
