@@ -29,19 +29,14 @@ public class LinkFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		for(Cookie cookie:((HttpServletRequest)request).getCookies()) {
-			if("test".equals(cookie.getName())){
-				System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-			}
+		if(request.getParameter("ticket")!=null){
+			chain.doFilter(request, response);
+			return;
 		}
-//		((HttpServletResponse)response).addCookie(new Cookie("test","test"));
 		String url="http://localhost:8219/casServerDemo/v1/tickets/";
-		String tgtRes=HttpUtils.httpPost4Tgt(url, "username=test&password=test");
+		String tgtRes=HttpUtils.httpPost4Tgt(url, "username=test&password=123");
 		System.out.println(tgtRes);
 		String st=HttpUtils.httpPost4St(url+tgtRes,"service=http://localhost:8219/casClientDemo/");
-		if(StringUtils.isNotBlank(st)) {
-			((HttpServletRequest)request).getSession().setAttribute("_const_cas_assertion_", new AssertionImpl(""));
-		}
 		System.out.println(st);
 		chain.doFilter(request, response);
 	}

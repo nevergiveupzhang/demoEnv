@@ -54,7 +54,7 @@ public class HttpUtils {
 			Header location=result.getFirstHeader("Location");
 			System.out.println(EntityUtils.toString(result.getEntity(), "utf-8"));
 			if(location!=null) {
-				return location.toString().substring(location.toString().lastIndexOf("/"));
+				return location.toString().substring(location.toString().lastIndexOf("/")+1);
 			}
 			return null;
 		} catch (IOException e) {
