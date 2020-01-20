@@ -65,7 +65,7 @@ public class HttpUtils {
 	}
 
 
-	public static String httpPost4St(String url, String param) throws IOException {
+	public static String httpPost(String url, String param) throws IOException {
 		// post请求返回结果
 				CloseableHttpClient httpClient = HttpClients.createDefault();
 				HttpPost httpPost = new HttpPost(url);
@@ -88,6 +88,24 @@ public class HttpUtils {
 					throw e;
 				} finally {
 					httpPost.releaseConnection();
+				}
+	}
+	
+	public static String httpGet(String url) throws IOException {
+		// post请求返回结果
+				CloseableHttpClient httpClient = HttpClients.createDefault();
+				HttpGet httpGet = new HttpGet(url);
+				httpGet.setProtocolVersion(HttpVersion.HTTP_1_0);
+				// 设置请求和传输超时时间
+				httpGet.setConfig(requestConfig);
+				try {
+					CloseableHttpResponse result = httpClient.execute(httpGet);
+					
+					return EntityUtils.toString(result.getEntity(), "utf-8");
+				} catch (IOException e) {
+					throw e;
+				} finally {
+					httpGet.releaseConnection();
 				}
 	}
 
