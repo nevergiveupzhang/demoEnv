@@ -50,9 +50,6 @@ public class LinkFilter implements Filter {
 			throws IOException, ServletException {
 		final HttpServletRequest request = (HttpServletRequest) servletRequest;
 		final HttpServletResponse response = (HttpServletResponse) servletResponse;
-		for(Cookie cookie:request.getCookies()) {
-			System.out.println("domain="+cookie.getDomain()+"&path="+cookie.getPath()+"&name="+cookie.getName()+"&value="+cookie.getValue());
-		}
 		String signature=request.getParameter("signature");
 		if(StringUtils.isBlank(signature)) {
 			chain.doFilter(request, response);
