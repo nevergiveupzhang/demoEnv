@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.SystemMessageDao">
+	<update id="updateStatusByIds">
+		update message_received set readed = 1
+		where eperson_id=#{epersonId}
+		and message_id in
+		<foreach collection="ids" item="id" open="(" separator=","
+			close=")">
+			#{id}
+		</foreach>
+	</update>
+	
+	<select id="getUnreadSystemMessageCount" parameterType="java.lang.Integer"
+		resultType="java.lang.Integer">
+		SELECT COUNT(0) FROM message_received R LEFT JOIN SYSTEMMESSAGE S ON R.`message_id`=S.`message_id`
+		where R.eperson_id = #{epersonId}
+		and R.readed = 0 and S.isdelete=0 and R.isdelete=0
+		<trim prefix="AND" prefixOverrides="AND|OR">
+			<if test="messageType != null">
+				and  S.`message_type` = #{messageType}
+			</if>			
+		</trim>
+	</select>
+	
+	<select id="getReceivedMessageCount" parameterType="java.lang.Integer"
+		resultType="java.lang.Integer">
+		SELECT COUNT(0) FROM message_received R LEFT JOIN SYSTEMMESSAGE S ON R.`message_id`=S.`message_id`
+		where R.eperson_id = #{epersonId}
+	     and and S.isdelete=0 and R.isdelete=0
+		<trim prefix="AND" prefixOverrides="AND|OR">
+			<if test="messageType != null">
+				and  S.`message_type` = #{messageType}
+			</if>			
+		</trim>
+	</select>
+	
+	<select id="getMessageInfo" parameterType="java.lang.Integer"
+		resultMap="SystemMessage">
+		SELECT m.*,e.scholar_name,e.eperson_id FROM `systemmessage` AS m LEFT JOIN eperson AS e ON m.send_id=e.`eperson_id` WHERE m.isdelete=0 AND message_id=#{id}
+	</select>
+	
+	<select id="getNextUnReadMessage" parameterType="java.lang.Integer"
+		resultMap="SystemMessage">
+		SELECT m.*,e.scholar_name,e.eperson_id FROM systemmessage AS m LEFT JOIN eperson AS e ON m.send_id=e.`eperson_id` WHERE m.isdelete=0 AND m.message_id=
+		(SELECT message_id FROM message_received WHERE eperson_id=#{id} AND readed=0 AND isdelete=0 ORDER BY activetime DESC LIMIT 1)
+	</select>
+	
+	<select id="getSystemMessageCount" parameterType="java.lang.Integer"
+		resultType="java.lang.Integer">
+		SELECT count(1) FROM systemmessage
+		where send_id = #{epersonId} and isdelete=0
+	</select>
+	
+	<!-- 接收到信息 -->
+	<select id="query" parameterType="java.util.Map" resultMap="SystemMessage">
+		SELECT r.`eperson_id`,r.`readed`, s.message_id,s.`activetime`,s.`content`,s.`message_type`,s.`send_id`,s.`title`,e.scholar_name
+		FROM `message_received` AS r LEFT JOIN systemmessage AS s ON
+		r.`message_id`=s.`message_id` LEFT JOIN eperson AS e ON r.`eperson_id` = e.eperson_id WHERE s.isdelete=0 and r.isdelete=0
+		<trim prefix="AND" prefixOverrides="AND|OR">
+			<if test="epersonId != null">
+				and r.eperson_id = #{epersonId}
+			</if>
+			<if test="readed != null">
+				and r.readed = #{readed}
+			</if>
+			<if test="name != null">
+				and (s.title like concat(concat('%',#{name}),'%') or s.content like concat(concat('%',#{name}),'%') )
+			</if>
+			<if test="messageType!= null">
+				and message_type=#{messageType}
+			</if>
+			<if test="sendId!= null">
+				and send_id=#{sendId}
+			</if>			
+		</trim>
+		order by activetime desc
+	</select>
+	
+	<!-- 发送信息 -->
+	<select id="getSendList" parameterType="java.util.Map" resultMap="SystemMessage">
+		SELECT * FROM systemmessage where isdelete=0
+		<trim prefix="AND" prefixOverrides="AND|OR">
+			<if test="name != null">
+				and (title like concat(concat('%',#{name}),'%') or content like concat(concat('%',#{name}),'%') )
+			</if>
+			<if test="messageType!= null">
+				and message_type=#{messageType}
+			</if>
+			<if test="sendId!= null">
+				and send_id=#{sendId}
+			</if>
+		</trim>
+		order by activetime desc
+	</select>
+
+	<delete id="deleteByIds" parameterType="java.lang.Integer">
+		update systemmessage set isdelete=1
+		where message_id in
+		<foreach collection="list" item="ids" open="(" separator=","
+			close=")">
+			#{ids}
+		</foreach>
+	</delete>
+</mapper>

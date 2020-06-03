@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.TopScholarDao">
+	<select id="query" resultMap="TopScholar" parameterType="java.util.Map">
+		SELECT
+		eperson_id,username,scholar_name FROM eperson WHERE eperson_id
+		IN(SELECT eperson_id FROM top_scholar ORDER BY order_id DESC)
+	</select>
+</mapper>

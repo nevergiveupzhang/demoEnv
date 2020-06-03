@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.ProjectColumnDao">
+   <select id="query" resultMap="ProjectColumn" parameterType="java.util.Map">
+      select * from project_column proc
+      <trim prefix="WHERE" prefixOverrides="AND|OR">
+       <if test="subjectCategory != null and subjectCategory != ''">
+            and proc.subjectCategory = #{subjectCategory}
+         </if>
+         <if test="project_name != null and project_name != ''">
+            and proc.project_name like concat(concat('%',#{project_name}),'%')
+         </if>
+          <if test="project_code != null and project_code != ''">
+            and proc.project_code like concat(concat('%',#{project_code}),'%')
+         </if>
+         <if test="projecttype != null">
+            and proc.projecttype = #{projecttype}
+         </if>
+         <if test="auditstatus != null and auditstatus != ''">
+            and proc.auditstatus = #{auditstatus}
+         </if>
+         <if test="state != null and state != ''">
+            and proc.state = #{state}
+         </if>
+         <if test="charge != null and charge != ''">
+            and proc.charge = #{charge}
+         </if>
+          <if test="charge != null and charge != ''">
+            and proc.charge = #{charge}
+         </if>
+         <if test="inputUserId != null">
+            and proc.inputUserId = #{inputUserId}
+         </if>
+          <if test="projectIdList != null">
+         	and project_id in  
+      		<foreach collection="projectIdList" item="projectIdList" open="(" separator="," close=")">
+        		 #{projectIdList}
+      		</foreach>
+         </if>
+	<if test="permissionMap != null">
+		<foreach collection="permissionMap.keys" item="item">
+			and ${item} in
+			<!-- ( #{permissionMap[${item}]} ) -->
+			<foreach collection="permissionMap[item]" item="itemList" open="(" separator="," close=")">
+				#{itemList}
+			</foreach>
+		</foreach>
+	</if>
+	<if test="noResult != null">
+           and 1=0
+	</if>
+	
+	
+	<if test="isFunds != null">
+           and proc.isFunds = #{isFunds}
+	</if>
+	
+	  <if test="fileName != null and fileName != ''">
+            and proc.fileName = #{fileName}
+     </if>
+	
+          and state >= 0
+      </trim>
+   </select>
+   
+
+   <select id="getById" parameterType="java.lang.Integer" resultMap="ProjectColumn">
+      select * from project_column where `state` >= 0 and project_id = #{project_id}
+   </select>
+   
+   
+    <select id="getProjectIds" resultType="java.lang.Integer">
+      select project_id from project_column where `state` >= 0
+   </select>
+   
+   
+   <select id="queryByFundsImport" resultMap="ProjectColumn" parameterType="java.util.Map">
+      select * from project_column proc
+      <trim prefix="WHERE" prefixOverrides="AND|OR">
+      <if test="project_name != null and project_name != ''">
+            and proc.project_name = #{project_name}
+         </if>
+          <if test="project_code != null and project_code != ''">
+            and proc.project_code = #{project_code}
+         </if>
+         <if test="charge != null and charge != ''">
+            and proc.charge = #{charge}
+         </if>
+         <if test="project_id != null">
+            and proc.project_id = #{project_id}
+         </if>
+          <if test="projecttype != null">
+              and proc.projecttype = #{projecttype}
+          </if>
+         
+      </trim>
+   </select>
+     <!-- 根据年分组,按照年升序 -->
+   <select id="getProjectStatisticsInfoGroupByYear"  resultType="org.pms.dataService.content.ActivitiStatisticInfo">
+   	select  DATE_FORMAT(creatTime,'%Y') `name`,COUNT(project_id) `value` FROM project_column where inputUserId = #{submitUserId} and state >= '0'  GROUP BY `name` order by `name`   	
+   </select>
+   
+   <select id="getProjectColumnInfoAndAuthorOrders"  resultMap="ProjectColumn">
+   	select p.project_id, GROUP_CONCAT(m.order separator ',') as allOrderStr from project_column p left join project2member m on p.project_id = m.projectid group by p.project_id
+   </select>
+   
+    <select id="getProjectIdListbyFileName" parameterType="java.lang.String" resultType="java.lang.Integer">
+      SELECT `project_id` FROM `project_column` WHERE `fileName`=#{fileName} and  state >= '0'
+   </select>
+</mapper>

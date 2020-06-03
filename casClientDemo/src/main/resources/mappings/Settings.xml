@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.SettingsDao">
+	<resultMap type="org.pms.dataService.content.Settings" id="Settings">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="nameEN" column="nameEN" />
+		<result property="nameTW" column="nameTW" />
+		<result property="code" column="code" />
+		<result property="filter" column="filter" />
+		<result property="orderId" column="orderId" />
+	</resultMap>
+
+	<select id="query" parameterType="java.util.Map" resultMap="Settings">
+		select * from ${tableName} where status = 1 ORDER BY filter,orderId,id
+	</select>
+	<select id="getByFilter" parameterType="java.util.Map" resultMap="Settings">
+		select * from ${tableName} where filter=#{filter}  and status = 1
+	</select>
+	<insert id="create" useGeneratedKeys="true" keyProperty="id"
+		parameterType="Settings">
+		insert into
+		${tableName}(name,nameEN,nameTW,code,filter,orderId,createtime,updatetime)
+		values(#{name},#{nameEN},#{nameTW},#{code},#{filter},#{orderId},NOW(),NOW())
+	</insert>
+
+	<update id="update" parameterType="Settings">
+		update ${tableName}
+		<set>
+			<if test="name != null and name != ''">
+				name = #{name},
+			</if>
+			<if test="nameEN != null and nameEN != ''">
+				nameEN = #{nameEN},
+			</if>
+			<if test="nameTW != null and nameTW != ''">
+				nameTW = #{nameTW},
+			</if>
+			<if test="code != null and code != ''">
+				code = #{code},
+			</if>
+			<if test="filter!=null and filter!=''">
+				filter=#{filter},
+			</if>
+			updatetime=NOW(),
+		</set>
+		where id = #{id}
+	</update>
+
+	<delete id="deleteById" parameterType="java.lang.Integer">
+		update ${tableName} set status=-1 where id = #{id}
+	</delete>
+
+	<delete id="deleteByFilter">
+		<!-- 此处原代码写的就是 eperson_baseinfo 查看后发现只有eperson用 且没有传表名 -->
+		update eperson_baseinfo set status=-1 where filter =#{filter}
+	</delete>
+	<delete id="deleteByTypeAndFilter">
+		update ${type} set status=-1 where filter =#{filter}
+	</delete>
+	<delete id="deleteAll">
+		update ${tableName} set status=-1 
+	</delete>
+	<delete id="deleteByIds">
+	
+	update ${tableName} set status=-1 where id in
+		<foreach collection="ids" item="ids" open="(" separator=","
+			close=")">
+			#{ids}
+		</foreach>
+	</delete>
+</mapper>

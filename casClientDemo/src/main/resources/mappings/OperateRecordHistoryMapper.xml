@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.OperateRecordHistoryDao">
+   <select id="query" resultType="org.pms.dataService.content.OperateRecordHistory">
+      SELECT *
+      FROM operate_record_history
+       <trim prefix="where" prefixOverrides="AND|OR">
+           <if test="itemId != null">
+               and itemId = #{itemId}
+           </if>
+           <if test="typeId != null">
+               and typeId = #{typeId}
+           </if>
+           <if test="childTypeId != null">
+               and childTypeId = #{childTypeId}
+           </if>
+           <if test="moduleId != null">
+               and moduleId = #{moduleId}
+           </if>
+           <if test="oprateType != null">
+               and oprateType = #{oprateType}
+           </if>
+           <if test="sourceType != null">
+               and sourceType = #{sourceType}
+           </if>
+       </trim>
+       order by inputTime asc
+   </select>
+   <delete id="delete" parameterType="java.util.Map">
+    	DELETE
+   	    FROM `operate_record_history`
+        <trim prefix="where" prefixOverrides="AND|OR">
+            <if test="itemId != null">
+                and itemId = #{itemId}
+            </if>
+            <if test="typeId != null">
+               and typeId = #{typeId}
+            </if>
+            <if test="childTypeId != null">
+                and childTypeId = #{childTypeId}
+            </if>
+            <if test="moduleId != null">
+                and moduleId = #{moduleId}
+            </if>
+            <if test="oprateType != null">
+                and oprateType = #{oprateType}
+            </if>
+            <if test="sourceType != null">
+                and sourceType = #{sourceType}
+            </if>
+        </trim>
+   </delete>
+</mapper>

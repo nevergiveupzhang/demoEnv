@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.ItemByAuthorDao">
+
+	<select id="query" parameterType="java.util.Map" resultMap="ItemByAuthor">
+		select * from itembyauthor
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="epersonId != null">
+				and epersonId = #{epersonId}
+			</if>
+			<if test="itemId != null">
+				<choose>
+						<when test="itemId instanceof Integer">
+							and item_id = #{itemId}
+						</when>
+						<when test="itemId instanceof java.util.List and itemId.size() > 0">
+							and item_id in
+							<foreach collection="itemId" item="im" open="(" close=")"
+								separator=",">
+								#{im}
+							</foreach>
+						</when>
+				</choose>
+			</if>
+			<if test="resourceType != null">
+				and resource_type = #{resourceType}
+			</if>
+		</trim>
+		ORDER BY author_index asc
+	</select>
+
+	<delete id="delete" parameterType="java.util.Map">
+		delete from itembyauthor
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="itemId != null">
+				<choose>
+					<when test="itemId instanceof Integer">
+						and item_id = #{itemId}
+					</when>
+					<when test="itemId instanceof java.util.List and itemId.size() > 0">
+						and item_id in
+						<foreach collection="itemId" item="im" open="(" close=")"
+							separator=",">
+							#{im}
+						</foreach>
+					</when>
+				</choose>
+			</if>
+			<if test="epersonId != null">
+				and epersonId = #{epersonId}
+			</if>
+			<if test="resourceType != null">
+				and resource_type = #{resourceType}
+			</if>
+		</trim>
+	</delete>
+   
+   <select id="getAuthorsOfItem" parameterType="java.util.Map" resultMap="ItemByAuthor">
+      SELECT ia.item_id,ia.epersonId,ia.author_index,ia.is_cpauthor,ia.author_name,ia.resource_type,e.scholar_name,e.eperson_id
+        FROM itembyauthor ia,eperson e
+     <trim prefix="WHERE" prefixOverrides="AND|OR">
+        and e.visible >= 0 and ia.epersonId is not null and ia.epersonId = e.eperson_id
+        <if test="authorIndex != null">
+          and ia.author_index  = #{authorIndex}
+        </if>
+        <if test="itemId != null">
+				<choose>
+					<when test="itemId instanceof Integer">
+						 AND ia.item_id = #{itemId}
+					</when>
+					<when test="itemId instanceof java.util.List and itemId.size() > 0">
+						and ia.item_id in
+						<foreach collection="itemId" item="im" open="(" close=")"
+							separator=",">
+							#{im}
+						</foreach>
+					</when>
+				</choose>
+			</if>
+        <if test="resourceType != null">
+		  and ia.resource_type = #{resourceType}
+		</if>
+      </trim>
+      ORDER BY ia.item_id,ia.author_index
+   </select>
+   
+   
+   <!-- 根据用户名查询成果附件名称 -->
+   <select id="queryFileNameByepersonId_new" parameterType="java.util.Map" resultType="String">
+      SELECT CASE WHEN ISNULL(i.cnkiFileName) THEN i.fileName ELSE i.cnkiFileName END filename 
+      FROM itembyauthor iba, item i, eperson e
+      WHERE e.visible >= 0 and iba.`epersonId` = e.`eperson_id`
+      AND iba.`item_id` = i.`item_id`
+      AND e.`eperson_id` = #{epersonId}
+      AND i.`citedfreq` IS NOT NULL
+      ORDER BY i.`citedfreq` DESC
+   </select>
+</mapper>

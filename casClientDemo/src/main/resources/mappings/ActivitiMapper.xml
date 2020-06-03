@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.ActivitiDao">
+   <select id ="getIdList" parameterType="java.lang.String"  resultType="java.lang.String">
+	     SELECT VAR_PROC_INST_ID_ FROM (${value}) obj
+   </select>
+   
+   <select id ="getTaskInfoList" parameterType="java.lang.String"  resultType="org.pms.dataService.content.Tuple">
+	     SELECT TASK_ID as item1,PROC_INST_ID_ as item2 FROM (${value}) obj
+   </select>
+   <select id="getYears" parameterType="java.util.Map" resultMap="tuple">
+      SELECT years as `keys`, COUNT(1) as `count`
+		FROM (
+		SELECT DATE_FORMAT(RES.END_TIME_,'%Y') years  
+		FROM ACT_HI_TASKINST RES 
+		LEFT OUTER JOIN ACT_HI_VARINST VAR ON RES.ID_ = VAR.TASK_ID_ 
+		INNER JOIN ACT_HI_PROCINST HPI ON RES.PROC_INST_ID_ = HPI.ID_ 
+		WHERE HPI.BUSINESS_KEY_ LIKE #{prefix}
+		AND RES.ASSIGNEE_ = #{userId}
+		AND RES.END_TIME_ IS NOT NULL
+		GROUP BY RES.ID_
+		) RES
+		GROUP BY `keys`
+   </select>
+   <select id="getMonths" parameterType="java.util.Map" resultType="tuple">
+      SELECT DATE_FORMAT(RES.END_TIME_,'%m') `keys`, COUNT(1) as `count`
+		FROM (
+		SELECT RES.END_TIME_,DATE_FORMAT(RES.END_TIME_,'%Y') years 
+		FROM ACT_HI_TASKINST RES 
+		LEFT OUTER JOIN ACT_HI_VARINST VAR ON RES.ID_ = VAR.TASK_ID_ 
+		INNER JOIN ACT_HI_PROCINST HPI ON RES.PROC_INST_ID_ = HPI.ID_ 
+		WHERE HPI.BUSINESS_KEY_ LIKE #{prefix}
+		AND RES.ASSIGNEE_ = #{userId}
+		AND RES.END_TIME_ IS NOT NULL
+		GROUP BY RES.ID_
+		) RES
+		WHERE years = #{year}
+		GROUP BY `keys`
+   </select>
+   <select id="getDays" parameterType="java.util.Map" resultType="tuple">
+      SELECT DATE_FORMAT(RES.END_TIME_,'%d') `keys`, COUNT(1) as `count`
+		FROM (
+		SELECT RES.END_TIME_,DATE_FORMAT(RES.END_TIME_,'%Y%m') months 
+		FROM ACT_HI_TASKINST RES 
+		LEFT OUTER JOIN ACT_HI_VARINST VAR ON RES.ID_ = VAR.TASK_ID_ 
+		INNER JOIN ACT_HI_PROCINST HPI ON RES.PROC_INST_ID_ = HPI.ID_ 
+		WHERE HPI.BUSINESS_KEY_ LIKE #{prefix}
+		AND RES.ASSIGNEE_ = #{userId}
+		AND RES.END_TIME_ IS NOT NULL
+		GROUP BY RES.ID_
+		) RES
+		WHERE months = #{month}
+		GROUP BY `keys`
+   </select>
+   <select id="getNearMonth" parameterType="java.util.Map" resultMap="tuple">
+      SELECT year_months as `keys`, COUNT(1) as `count`
+		FROM (
+		SELECT DATE_FORMAT(RES.END_TIME_,'%Y%m') year_months,RES.END_TIME_ as end_time
+		FROM ACT_HI_TASKINST RES 
+		LEFT OUTER JOIN ACT_HI_VARINST VAR ON RES.ID_ = VAR.TASK_ID_ 
+		INNER JOIN ACT_HI_PROCINST HPI ON RES.PROC_INST_ID_ = HPI.ID_ 
+		WHERE HPI.BUSINESS_KEY_ LIKE #{prefix}
+		AND RES.ASSIGNEE_ = #{userId}
+		AND RES.END_TIME_ IS NOT NULL
+		GROUP BY RES.ID_
+		) RES
+		WHERE end_time BETWEEN #{startTime} AND #{endTime}
+		GROUP BY `keys`
+   </select>
+</mapper>

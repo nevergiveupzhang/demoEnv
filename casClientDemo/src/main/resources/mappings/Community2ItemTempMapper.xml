@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.Community2ItemTempDao">
+	<select id="query" parameterType="java.util.Map" resultMap="community2item">
+		select * from community2item_temp
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="itemId != null">
+				and item_id = #{itemId}
+			</if>
+			<if test="communityId != null">
+				and community_id = #{communityId}
+			</if>
+			<if test="resourceType != null">
+				and resource_type = #{resourceType}
+			</if>
+		</trim>
+	</select>
+
+	<select id="getCommunityIdList" parameterType="java.util.Map"
+		resultType="java.lang.Integer">
+		SELECT community_id FROM `community2item_temp`
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="itemId != null">
+				and item_id = #{itemId}
+			</if>
+			<if test="resourceType != null">
+				and resource_type = #{resourceType}
+			</if>
+		</trim>
+	</select>
+	<insert id="copyDataFromitembycommunity" parameterType="java.util.Map">
+		INSERT INTO `community2item_temp` (`community_id`, `comm_index`,
+		`community_name`, `item_id`, `match_type`, `resource_type`,
+		`submitter_id`, `create_time`,`operatetype`,`edit_id`)
+		SELECT `community_id`, `comm_index`, `community_name`, `item_id`,
+		`match_type`, `resource_type`, `submitter_id`, `create_time`,0,0
+		FROM community2item
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="resourceType != null">
+				and resource_type=#{resourceType}
+			</if>
+			<if test="resourceId != null">
+				and item_id=#{resourceId}
+			</if>
+		</trim>
+	</insert>
+
+	<delete id="delete" parameterType="java.util.List">
+		delete from community2item_temp
+		
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="resourceType != null">
+				and resource_type = #{resourceType}
+			</if>
+			<if test="itemId != null">
+				<choose>
+					<when test="itemId instanceof Integer">
+						and item_id = #{itemId}
+					</when>
+					<when test="itemId instanceof java.util.List and itemId.size() > 0">
+						and item_id in
+						<foreach collection="itemId" item="im" open="(" close=")"
+							separator=",">
+							#{im}
+						</foreach>
+					</when>
+				</choose>
+			</if>
+			<if test="id != null">
+				<choose>
+					<when test="id instanceof Integer">
+						and id = #{id}
+					</when>
+					<when test="id instanceof java.util.List and id.size() > 0">
+						and id in
+						<foreach collection="list" item="id" open="(" close=")"
+							separator=",">
+							#{id}
+						</foreach>
+					</when>
+				</choose>
+			</if>
+		</trim>
+	</delete>
+</mapper>

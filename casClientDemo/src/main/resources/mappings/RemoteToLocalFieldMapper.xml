@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.RemoteToLocalDCDao">
+   <select id="query" parameterType="java.util.Map" resultMap="RemoteToLocalDC">
+      select r.rfield_name, r.metadata_field_id, r.language, r.resource_type_id, r.contenttype_id, field.element, field.qualifier, metaschema.short_id   from remote2localdc r join metadatafieldregistry field on r.metadata_field_id = field.metadata_field_id 
+      join metadataschemaregistry metaschema on metaschema.metadata_schema_id = field.metadata_schema_id      
+      where isUse = 1
+   </select>
+</mapper>

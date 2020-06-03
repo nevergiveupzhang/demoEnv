@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.TeachingHoursDao">
+	<select id="query" parameterType="java.util.Map" resultMap="TeachingHours">
+		select * from teaching_hours t
+
+		left join community c on c.community_id=t.department
+
+		<trim prefix="where" prefixOverrides="AND|OR">
+			<if test="id!=null and id!='' and id!=0">
+				and t.id=${id}
+			</if>
+            <if test="eperson_id!=null">
+                and t.eperson_id=${eperson_id}
+            </if>
+			<if test="yearStart!=null">
+				and <![CDATA[t.year >= ${yearStart}]]>
+			</if>
+			<if test="yearEnd!=null">
+				and <![CDATA[t.year <= ${yearEnd}]]>
+			</if>
+			<if test="name!=null and name!=''">
+				and t.name like '%${name}%'
+			</if>
+			<if test="department!=null and department!=''">
+				and t.department =${department}
+			</if>
+
+			<if test="permissionMap != null">  <!-- 数据范围 -->
+				<foreach collection="permissionMap.keys" item="item">
+					and ${item} in
+					<!-- ( #{permissionMap[${item}]} ) -->
+					<foreach collection="permissionMap[item]" item="itemList" open="(" separator="," close=")">
+						#{itemList}
+					</foreach>
+				</foreach>
+			</if>
+
+
+			<if test="year!=null and year!=''">
+				and t.year like '%${year}%'
+			</if>
+			<if test="ids != null">
+				t.id in
+				<foreach collection="ids" item="ids" open="(" separator="," close=")">
+					#{ids}
+				</foreach>
+			</if>
+
+		</trim>
+		ORDER BY orderId
+	</select>
+</mapper>

@@ -13,13 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
 import org.jasig.cas.client.validation.AssertionImpl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.utils.HttpUtils;
 
 public class LinkFilter implements Filter {
-
+	private final transient Logger logger=Logger.getLogger(this.getClass());
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
@@ -29,6 +30,7 @@ public class LinkFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+		logger.info("你好");
 		if(request.getParameter("ticket")!=null){
 			chain.doFilter(request, response);
 			return;

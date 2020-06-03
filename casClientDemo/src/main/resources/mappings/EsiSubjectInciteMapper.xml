@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.EsiSubjectInciteDao">
+   <select id="query"  parameterType="java.util.Map" resultMap="EsiSubjectIncite">
+      SELECT a.display_name,a.subject_name_en,b.* FROM subject_esi a JOIN 
+      (SELECT * FROM esi_subject_incites WHERE name_cn=#{irName} AND version_num=#{versionNum}) b ON a.subject_name_en=b.subject
+      ORDER BY b.times_cited DESC  
+   </select>
+</mapper>

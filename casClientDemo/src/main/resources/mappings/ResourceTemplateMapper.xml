@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.ResourceTemplateDao">
+    <select id="queryMapFront" resultMap="ResourceTemplateFrontPage">
+    select * FROM
+    (resource_template mv join metadatafieldregistry mf on mv.metadata_field_id = mf.metadata_field_id) join
+    metadataschemaregistry ms on mf.metadata_schema_id = ms.metadata_schema_id
+    <where>
+        mv.isDisplayOnFrontPage = 1
+        <if test="resourceTypeId != null and resourceTypeId != '' ">
+            and mv.resource_type_id = #{resourceTypeId}
+        </if>
+        <if test="contentTypeId != null and contentTypeId != '' ">
+            and mv.contenttype_id = #{contentTypeId}
+        </if>
+    </where>
+    ORDER BY frontPageOrder ASC
+    </select>
+
+    <select id="queryMapFrontFixed" resultMap="ResourceTemplateFrontPage">
+        select * FROM
+        (resource_template mv join metadatafieldregistry mf on mv.metadata_field_id = mf.metadata_field_id) join
+        metadataschemaregistry ms on mf.metadata_schema_id = ms.metadata_schema_id
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test="resourceTypeId != null and resourceTypeId != '' ">
+                and mv.resource_type_id = #{resourceTypeId}
+            </if>
+           <choose>
+                <when test="(contentTypeId == 1 or contentTypeId == 2 or contentTypeId == 3) and resourceTypeId == 2">
+                    and CASE
+                    WHEN
+                    mv.contenttype_id = #{contentTypeId}
+                    AND (mv.isDisplayOnFrontPage IS NULL
+                    OR mv.isDisplayOnFrontPage = 0)
+                    THEN
+                    (mv.metadata_field_id =14 OR
+                    mv.metadata_field_id =16 OR
+                    (mv.metadata_field_id =28 AND mv.fieldname='关键词') OR
+                    (mv.metadata_field_id =20 AND (mv.fieldname='刊名' OR mv.fieldname='会议录名称')) OR
+                    mv.metadata_field_id =21 OR
+                    mv.metadata_field_id = 22 OR
+                    mv.metadata_field_id = 23 OR
+                    mv.metadata_field_id =24)
+                    END
+                </when>
+                <when test="contentTypeId == 4 and resourceTypeId == 2">
+                    and CASE
+                    WHEN
+                    mv.contenttype_id = #{contentTypeId}
+                    AND (mv.isDisplayOnFrontPage IS NULL
+                    OR mv.isDisplayOnFrontPage = 0)
+                    THEN
+                    (mv.metadata_field_id =14 OR
+                    mv.metadata_field_id =16 OR
+                    mv.metadata_field_id =25 OR
+                    mv.metadata_field_id = 20 OR
+                    (mv.metadata_field_id =28 AND mv.fieldname='关键词') OR
+                    mv.metadata_field_id = 329)
+                    END
+                </when>
+                <when test="contentTypeId == 5 and resourceTypeId == 2">
+                    and CASE
+                    WHEN
+                    mv.contenttype_id = #{contentTypeId}
+                    AND (mv.isDisplayOnFrontPage IS NULL
+                    OR mv.isDisplayOnFrontPage = 0)
+                    THEN
+                    (mv.metadata_field_id =14 OR
+                    mv.metadata_field_id =16 OR
+                    mv.metadata_field_id =25 OR
+                    (mv.metadata_field_id =28 AND mv.fieldname='关键词') OR
+                    mv.metadata_field_id = 572)
+                    END
+                </when>
+                <when test="contentTypeId == 6 and resourceTypeId == 2">
+                    and CASE
+                    WHEN
+                    mv.contenttype_id = #{contentTypeId}
+                    AND (mv.isDisplayOnFrontPage IS NULL
+                    OR mv.isDisplayOnFrontPage = 0)
+                    THEN
+                    (mv.metadata_field_id =14 OR
+                    mv.metadata_field_id =16 OR
+                    (mv.metadata_field_id =28 AND mv.fieldname='关键词') OR
+                    mv.metadata_field_id = 350)
+                    END
+                </when>
+                <when test="contentTypeId == 14 and resourceTypeId == 2">
+                    and CASE
+                    WHEN
+                    mv.contenttype_id = #{contentTypeId}
+                    AND (mv.isDisplayOnFrontPage IS NULL
+                    OR mv.isDisplayOnFrontPage = 0)
+                    THEN
+                    (mv.metadata_field_id =14 OR
+                    mv.metadata_field_id =16 OR
+                    mv.metadata_field_id =20 OR
+                    mv.metadata_field_id =25 OR
+                    mv.metadata_field_id = 344)
+                    END
+                </when>
+               <when test="resourceTypeId == 8">
+                   and CASE
+                   WHEN
+                   mv.contenttype_id = #{contentTypeId}
+                   AND (mv.isDisplayOnFrontPage IS NULL
+                   OR mv.isDisplayOnFrontPage = 0)
+                   THEN
+                   (mv.metadata_field_id =242 OR
+                   mv.metadata_field_id =243 OR
+                   mv.metadata_field_id =256 OR
+                   mv.metadata_field_id =292 OR
+                   mv.metadata_field_id = 285)
+                   END
+               </when>
+               <when test="resourceTypeId == 5">
+                   and CASE
+                   WHEN
+                   mv.contenttype_id = #{contentTypeId}
+                   AND (mv.isDisplayOnFrontPage IS NULL
+                   OR mv.isDisplayOnFrontPage = 0)
+                   THEN
+                   (mv.metadata_field_id =369 OR
+                   mv.metadata_field_id =368 OR
+                   mv.metadata_field_id =370 OR
+                   mv.metadata_field_id =374 OR
+                   mv.metadata_field_id = 376)
+                   END
+               </when>
+               <when test="resourceTypeId == 11">
+                   and CASE
+                   WHEN
+                   mv.contenttype_id = #{contentTypeId}
+                   AND (mv.isDisplayOnFrontPage IS NULL
+                   OR mv.isDisplayOnFrontPage = 0)
+                   THEN
+                   (mv.metadata_field_id =404 OR
+                   mv.metadata_field_id =406 OR
+                   mv.metadata_field_id =412)
+                   END
+               </when>
+               <when test="resourceTypeId == 9">
+                   and CASE
+                   WHEN
+                   mv.contenttype_id = #{contentTypeId}
+                   AND (mv.isDisplayOnFrontPage IS NULL
+                   OR mv.isDisplayOnFrontPage = 0)
+                   THEN
+                   (mv.metadata_field_id =381 OR
+                   mv.metadata_field_id =382 OR
+                   mv.metadata_field_id =384 OR
+                   mv.metadata_field_id =386)
+                   END
+               </when>
+                <otherwise>
+                    and CASE
+                    WHEN
+                    mv.contenttype_id = #{contentTypeId}
+                    AND (mv.isDisplayOnFrontPage IS NULL
+                    OR mv.isDisplayOnFrontPage = 0)
+                    THEN
+                    (mv.metadata_field_id =14 OR
+                    mv.metadata_field_id =16 OR
+                    mv.metadata_field_id =20 OR
+                    (mv.metadata_field_id =28 AND mv.fieldname='关键词') OR
+                    mv.metadata_field_id =25)
+                    END
+                </otherwise>
+            </choose>
+        </trim>
+        ORDER BY frontPageOrder ASC
+    </select>
+</mapper>

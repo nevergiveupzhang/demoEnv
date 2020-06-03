@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.MetadataValue_ExpertDao">
+	<select id="getMetadataValue" parameterType="java.util.Map"
+		resultMap="MetadataValue">
+		SELECT mv.resource_id as resourceId,
+		mv.metadata_value_id as id, mv.metadata_field_id as fieldId, ms.short_id as 'schema',
+		mf.element as element, mf.qualifier as qualifier, mv.text_lang as
+		'language',
+		mv.place as place, mv.text_value as 'textValue',mv.isshow
+		FROM metadata_expert mv, metadatafieldregistry mf, metadataschemaregistry
+		ms
+		<trim prefix="where" prefixOverrides="AND|OR">
+			mv.metadata_field_id = mf.metadata_field_id AND mf.metadata_schema_id
+			= ms.metadata_schema_id
+			<if test="schema != null and schema != ''">
+				and ms.short_id = #{schema}
+			</if>
+			<if test="element != null and element != ''">
+				and mf.element = #{element}
+			</if>
+			<if test="qualifier != null and qualifier != ''">
+				and mf.qualifier = #{qualifier}
+			</if>
+			<if test="resourceIds != null">
+				<if test="resourceIds.length > 1">
+					and mv.resource_id in
+					<foreach collection="resourceIds" item="resourceId" open="("
+						separator="," close=")">
+						#{resourceId}
+					</foreach>
+				</if>
+				<if test="resourceIds.length == 1">
+					and mv.resource_id = #{resourceIds[0]}
+				</if>
+			</if>
+		</trim>
+	</select>
+
+	<select id="getEpersonMetaGroupByFieldId" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		SELECT mv.metadata_field_id AS fieldId, mv.text_value AS metadataText,
+		COUNT(1) AS count
+		FROM metadata_expert mv,
+		metadatafieldregistry mf,
+		metadataschemaregistry ms,
+		eperson ep
+		WHERE ep.visible >= 0 and mv.metadata_field_id = mf.metadata_field_id
+		AND mf.metadata_schema_id = ms.metadata_schema_id
+		AND ms.short_id = 'eperson'
+		<if test="element != null">
+			AND mf.element = #{element}
+		</if>
+		<if test="qualifier != null">
+			AND mf.qualifier = #{qualifier}
+		</if>
+		AND mv.text_value IS NOT NULL AND mv.text_value != ''
+		AND mv.resource_id = ep.eperson_id
+		<if
+			test="(commIds != null and commIds.size() > 0) or (commType != null and commType != '')">
+			AND ep.eperson_id IN
+			(
+			SELECT e2p.eperson_id FROM community2eperson e2p, community comm
+			WHERE comm.`status` >= 0 and e2p.community_id = comm.community_id
+			<if test="commIds != null and commIds.size() > 0">
+				AND comm.community_id in
+				<foreach collection="commIds" open="(" close=")" separator=","
+					item="commId">
+					#{commId}
+				</foreach>
+			</if>
+			<if test="commType != null and commType != '' ">
+				AND comm.type = #{commType}
+			</if>
+			)
+		</if>
+		<!-- AND ep.visible = 1 -->
+		GROUP BY mv.text_value
+		<choose>
+			<when test="orderByCount != null">
+				ORDER BY count desc
+			</when>
+			<otherwise>
+				ORDER BY mv.text_value asc
+			</otherwise>
+		</choose>
+	</select>
+</mapper>

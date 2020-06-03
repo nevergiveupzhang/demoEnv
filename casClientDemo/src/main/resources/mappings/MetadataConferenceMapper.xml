@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.MetadataConferenceDao">
+   <select id="getMetadata" parameterType="java.util.Map" resultMap="MetadataValue">
+      SELECT mv.metadata_value_id AS id, mv.metadata_field_id AS fieldId, ms.short_id AS 'schema',
+      mf.element AS element, mf.qualifier AS qualifier, mv.place AS place,
+      rt.showpage AS page,
+      mv.text_value AS textValue, mv.text_lang AS language,
+      mv.resource_id AS resourceId
+      FROM `conference_metadata` mv, metadatafieldregistry mf, metadataschemaregistry
+      ms, resource_template rt
+      <trim prefix="where" prefixOverrides="AND|OR">
+          mv.metadata_field_id = mf.metadata_field_id
+         AND mf.metadata_schema_id = ms.metadata_schema_id
+         AND rt.metadata_field_id = mv.metadata_field_id
+         AND rt.`language` = mv.text_lang
+         <if test="contentTypeId != null">
+            and rt.contenttype_id = #{contentTypeId}
+         </if>
+         <if test="resourceType != null">
+            and rt.resource_type_id = #{resourceType}
+            and mv.resource_type_id = #{resourceType}
+         </if>
+         <if test="resourceId != null">
+            and mv.resource_id = #{resourceId}
+         </if>
+      </trim>
+      order by rt.fieldorder, mv.place
+   </select>
+   
+    <select id="getMetadataValue" parameterType="java.util.Map" resultMap="MetadataValue">
+      SELECT mv.resource_id as resourceId,
+      mv.metadata_value_id as id, mv.metadata_field_id as fieldId, ms.short_id as 'schema',
+      mf.element as element, mf.qualifier as qualifier, mv.text_lang as 'language',
+      mv.place as place, mv.text_value as 'textValue',mv.contenttype_id as contentTypeId
+      FROM conference_metadata mv, metadatafieldregistry mf, metadataschemaregistry ms
+      <trim prefix="where" prefixOverrides="AND|OR">
+         mv.metadata_field_id = mf.metadata_field_id AND mf.metadata_schema_id = ms.metadata_schema_id
+         <if test="schema != null and schema != ''">
+            and ms.short_id = #{schema}
+         </if>
+         <if test="element != null and element != ''">
+            and mf.element = #{element}
+         </if>
+         <if test="metadataFieldId != null and metadataFieldId != ''">  <!-- 这里需要测试一下， map中的metadataFieldId是Integer类型，会不会报错？？？ -->
+            and mf.metadata_field_id = #{metadataFieldId}
+         </if>
+         <if test="qualifier != null and qualifier != ''">
+            and mf.qualifier = #{qualifier}
+         </if>
+         <if test="resourceIds != null">
+            <if test="resourceIds.length > 1">
+              and mv.resource_id in 
+              <foreach collection="resourceIds" item="resourceId" open="(" separator="," close=")">
+                #{resourceId}
+              </foreach>
+            </if>
+            <if test="resourceIds.length == 1">
+              and mv.resource_id = #{resourceIds[0]}
+            </if>
+         </if>
+      </trim>
+   </select>
+</mapper>

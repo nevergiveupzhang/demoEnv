@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.SystemFileUploadDao">
+   <select id="selectByFieldIdList" resultType="org.pms.dataService.content.SystemFileUploadInfo">
+      select * 
+      from systemfileupload 
+      WHERE fieldId IN
+      <foreach collection="list" item="fieldId" open="(" close=")" separator=",">
+      #{fieldId}
+      </foreach> 
+      ORDER BY inputTime
+   </select>
+</mapper>

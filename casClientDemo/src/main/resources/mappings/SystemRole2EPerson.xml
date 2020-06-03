@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.SystemRole2EPersonDao">
+	<select id="roleIsUsed" resultType="int">
+	 select count(1) from systemrole2eperson join eperson on eperson.eperson_id = systemrole2eperson.eperson_id where systemrole_id = #{roleId} and eperson.isdelete = 0 
+	</select>
+</mapper>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.ProjectFinishListDao">
+   <select id="query" parameterType="java.util.Map" resultMap="ProjectFinishList">
+	SELECT ptom.finishid,pm.batch,pm.begindate,pm.enddate,pc.project_name,pc.project_code,
+pc.charge,pc.datestart,ptom.projectstate,ptom.relaid as relaid,pc.project_id,
+ptom.finishdate,ptom.finishinfo,ptom.filejson,ptom.projectmessage
+ FROM `project2finish` ptom
+JOIN project_column pc ON ptom.projectid=pc.project_id
+JOIN projectfinish pm ON ptom.finishid=pm.finishid
+	<trim prefix="WHERE" prefixOverrides="AND|OR">
+
+		<if test="finishid != null">
+			and ptom.finishid=#{finishid}
+		</if>
+		<if test="inputUserId != null">
+			and pc.inputUserId=#{inputUserId}
+		</if>
+		<if test="project_id != null">
+			and pc.project_id=#{project_id}
+		</if>
+		<if test="relaid != null">
+			and ptom.relaid=#{relaid}
+		</if>
+		 <if test="project_name != null and project_name != ''">
+            and pc.project_name like concat(concat('%',#{project_name}),'%')
+         </if>
+          <if test="project_code != null and project_code != ''">
+            and pc.project_code like concat(concat('%',#{project_code}),'%')
+         </if>
+		<if test="project_charge != null and project_charge != ''">
+			and pc.charge=#{project_charge}
+		</if>
+        and pc.state >= 0
+	</trim>
+</select>
+
+   <select id="queryAllByProjectId" parameterType="java.util.Map" resultMap="ProjectFinishCheckList">
+	SELECT *
+ FROM `project2finish` ptom
+JOIN project_column pc ON ptom.projectid=pc.project_id
+JOIN projectfinish pm ON ptom.finishid=pm.finishid
+	<trim prefix="WHERE" prefixOverrides="AND|OR">
+		<if test="project_id != null">
+			and pc.project_id=#{project_id}
+		</if>
+		<if test="relaid != null">
+			and ptom.relaid=#{relaid}
+		</if>
+	</trim>
+</select>
+</mapper>

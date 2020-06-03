@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.ReviewBatchProjectEPersonRelationDao">
+    <select id="getReviewExpertNum" resultType="java.lang.Integer">
+        SELECT
+        COUNT( 1 )
+        FROM
+        review_batch_project_eperson_relation
+        WHERE
+        reviewBatchId = #{reviewBatchId}
+        AND reviewBatchProjectId = (
+        SELECT
+        rbp.id
+        FROM
+        review_batch_project rbp
+        INNER JOIN review_batch_project_relation rbpr ON rbpr.reviewBatchProjectId = rbp.id
+        AND rbpr.reviewBatchId = #{reviewBatchId}
+        WHERE
+        rbp.projectId = #{projectId}
+        )
+        <if test="state != null">
+            AND state = #{state}
+        </if>
+        AND epersonId IS NOT NULL
+    </select>
+    <select id="getRelationByReviewBatchId"
+            resultType="org.pms.dataService.content.ReviewBatchProjectEPersonRelation">
+        SELECT
+        rber.*,
+        rbpr.reviewBatchProjectId,
+        0 AS state
+        FROM
+        review_batch_eperson_relation rber
+        INNER JOIN review_batch_project_relation rbpr ON rbpr.reviewBatchId = rber.reviewBatchId
+        WHERE
+        rber.reviewBatchId = #{reviewBatchId}
+        <if test="epersonIdList != null and epersonIdList.size() > 0">
+            AND rber.epersonId NOT IN
+            <foreach collection="epersonIdList" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+    </select>
+</mapper>

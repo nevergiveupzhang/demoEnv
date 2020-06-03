@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.ItemByAuthorTempDao">
+	<select id="query" parameterType="java.util.Map"
+		resultMap="ItemByAuthor">
+		select * from itembyauthor_temp
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="epersonId != null">
+				and epersonId = #{epersonId}
+			</if>
+			<if test="itemId != null">
+				and item_id = #{itemId}
+			</if>
+			<if test="resourceType != null">
+				and resource_type = #{resourceType}
+			</if>
+			<if test="id!=null">
+				and itembyauthor_id=#{id}
+			</if>
+			<if test="operateType!=null">
+				and operateType=#{operateType}
+			</if>
+		</trim>
+		ORDER BY author_index
+	</select>
+	<delete id="delete">
+		delete from `itembyauthor_temp`
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="resourceType != null">
+				and resource_type = #{resourceType}
+			</if>
+			<if test="itemId != null">
+				<choose>
+					<when test="itemId instanceof Integer">
+						and item_id = #{itemId}
+					</when>
+					<when test="itemId instanceof java.util.List and itemId.size() > 0">
+						and item_id in
+						<foreach collection="itemId" item="im" open="(" close=")"
+							separator=",">
+							#{im}
+						</foreach>
+					</when>
+				</choose>
+			</if>
+			<if test="id != null">
+				<choose>
+					<when test="id instanceof Integer">
+						and itembyauthor_id = #{id}
+					</when>
+					<when test="id instanceof java.util.List and id.size() > 0">
+						and itembyauthor_id in
+						<foreach collection="list" item="id" open="(" close=")"
+							separator=",">
+							#{id}
+						</foreach>
+					</when>
+				</choose>
+			</if>
+		</trim>
+	</delete>
+</mapper>

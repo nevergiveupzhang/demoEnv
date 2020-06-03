@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.Award2ProjectDao">
+   <select id="query" parameterType="java.util.Map" resultType="org.pms.dataService.content.Award">
+   		select award.id,award.name from award left join award2project on award.id=award2project.awardId where award2project.projectId = #{projectId}
+   </select>
+</mapper>

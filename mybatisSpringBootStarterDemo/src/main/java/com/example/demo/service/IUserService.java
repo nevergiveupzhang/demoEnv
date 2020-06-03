@@ -6,4 +6,6 @@ import com.example.demo.po.User;
 
 public interface IUserService {
 	List<User> getUsers();
+
+	void methodA();
 }

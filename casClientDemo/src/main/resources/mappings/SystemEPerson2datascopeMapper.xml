@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pms.dataService.dao.SystemEPerson2datascopeDao">
+	<select id="query" resultType="SystemEPerson2DataScope">
+		SELECT
+		ed.id,ed.eperson_id,ed.value,md.moduleCode,ed.module2datascope_id,md.datascopeId,md.infoName,md.databaseName,md.solrName
+		FROM systemeperson2datascope ed LEFT JOIN systemmodule2datascope md ON
+		ed.module2datascope_id=md.id
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="epersonId != null">
+				and ed.eperson_id = #{epersonId}
+			</if>
+			<if test="module2datascopeId != null">
+				and ed.module2datascope_id = #{module2datascopeId}
+			</if>
+			<if test="moduleCode != null">
+				and md.moduleCode = #{moduleCode}
+			</if>
+			<if
+				test="module2datascopeidlist != null and module2datascopeidlist.size > 0">
+				and ed.module2datascope_id in
+				<foreach collection="module2datascopeidlist" item="itemModule"
+					open="(" separator="," close=")">
+					#{itemModule}
+				</foreach>
+			</if>
+		</trim>
+	</select>
+	<select id="queryByModuleCode" resultType="org.pms.dataService.content.SystemEPerson2DataScope">
+		select *
+		from
+		systemeperson2datascope where module2datascope_id in(SELECT id FROM
+		systemmodule2datascope WHERE moduleCode=#{code})
+	</select>
+	
+	<select id="queryByEPersonIds" resultType="org.pms.dataService.content.SystemEPerson2DataScope">
+		SELECT * FROM systemeperson2datascope e2d LEFT JOIN (SELECT m2d.id,df.describe FROM systemmodule2datascope m2d LEFT JOIN systemdatascopefield df ON m2d.datascopeId=df.id) s ON e2d.module2datascope_id=s.id where eperson_id in
+		<foreach collection="list" item="ids" open="(" separator=","
+			close=")">
+			#{ids}
+		</foreach>
+	</select>
+</mapper>
