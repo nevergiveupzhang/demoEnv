@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.pms.dataService.dao.SystemRole2ModuleDao">
-		<select id="getByModuleCode" resultType="SystemRole2Module">
-		select id, systemrole_id as roleId,pmsmodule_id as pmsModuleId from systemrole2module sm LEFT JOIN pms_module pm ON sm.`pmsmodule_id`=pm.`pms_module_id` WHERE CODE=#{moduleCode}		
-	</select>
-	
-</mapper>

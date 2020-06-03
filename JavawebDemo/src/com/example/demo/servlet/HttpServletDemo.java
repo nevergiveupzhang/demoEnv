@@ -25,19 +25,24 @@ public class HttpServletDemo extends HttpServlet {
 //		for(Cookie cookie:req.getCookies()) {
 //			System.out.println("cookie:	"+cookie.getName()+"|"+cookie.getValue());
 //		}
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
-		out.println("<HTML>");
-		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
-		out.println("  <BODY>");
-		out.print("    This is ");
-		out.print(this.getClass());
-		out.println(", using the GET method");
-		out.println("  </BODY>");
-		out.println("</HTML>");
-		out.flush();
-		out.close();
+		Cookie cookie=new Cookie("test", "123");
+		cookie.setPath("/");
+		cookie.setDomain("localhost");
+		response.addCookie(cookie);
+		response.sendRedirect("http://localhost:8219/aopDemo/login?userName=123");
+//		response.setContentType("text/html");
+//		PrintWriter out = response.getWriter();
+//		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+//		out.println("<HTML>");
+//		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
+//		out.println("  <BODY>");
+//		out.print("    This is ");
+//		out.print(this.getClass());
+//		out.println(", using the GET method");
+//		out.println("  </BODY>");
+//		out.println("</HTML>");
+//		out.flush();
+//		out.close();
 	}
 	
 	public void init() {

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.pms.dataService.dao.Item2SubscribeDao">
-   <select id="queryAll" resultType="Item2Subscribe">
-    SELECT t.id, t.item_id, t.authors FROM item2subscribe t,item
-        WHERE item.item_id = t.item_id and item.discoverable=1
-   </select>
-</mapper>

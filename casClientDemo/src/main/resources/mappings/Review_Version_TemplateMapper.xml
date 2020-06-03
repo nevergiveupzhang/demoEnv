@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.pms.dataService.dao.Review_Version_TemplateDao">
-    <select id="getByParentCode" resultType="java.lang.String">
-        select rec.`value` from review_version_template rvt inner join review_expert_content rec on rec.`name` = rvt.`code`
-        and rec.expertId = #{expertId} where rvt.parentCode = #{parentCode} and rvt.isDelete = 0
-    </select>
-</mapper>
