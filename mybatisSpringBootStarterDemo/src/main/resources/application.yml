@@ -10,9 +10,9 @@ spring:
       prefix: /WEB-INF/
       suffix: .jsp
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test
+    url: jdbc:mysql://127.0.0.1:3310/test
     username: root
-    password: 123
+    password: cnki2019
     driver-class-name: com.mysql.jdbc.Driver
 
 customPath: custom

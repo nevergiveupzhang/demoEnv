@@ -7,4 +7,5 @@ import com.example.demo.po.User;
 
 public interface UserMapper {
 	List<User> getUsers();
+	Integer create(User user);
 }

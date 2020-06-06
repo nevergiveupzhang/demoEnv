@@ -1,0 +1,20 @@
+debug: true
+spring:
+   mvc:
+      view:
+         prefix: /WEB-INF/pages/
+         suffix: .jsp
+server:
+  port: 8080
+pms.sso.ip: 127.0.0.1:8219
+#  context-path: /cshljzyydx-h
+sso:
+  cas:
+    client:
+      callbackUrl: http://127.0.0.1:8080/callback?client_name=CasClient
+      successUrl: http://127.0.0.1:8080/home
+    server:
+      loginUrl: http://${pms.sso.ip}/cshljzyydx-cas/login
+      prefixUrl: http://${pms.sso.ip}/cshljzyydx-cas
+
+     

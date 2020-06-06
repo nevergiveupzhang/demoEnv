@@ -4,4 +4,8 @@
 	<select id="getUsers" resultType="User">
 		select * from user;
 	</select>
+	
+	<insert id="create" parameterType="User">
+		insert into user(name) value(#{name});	
+	</insert>
 </mapper>
