@@ -148,7 +148,7 @@
              Documentation at: /docs/config/valve.html
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
-	  <Context docBase="casClientDemo" path="/casClientDemo" reloadable="true" source="org.eclipse.jst.j2ee.server:casClientDemo"/><Context docBase="casServerDemo" path="/casServerDemo" reloadable="true" source="org.eclipse.jst.j2ee.server:casServerDemo"/></Host>
+	  <Context docBase="MahjongServer" path="/MahjongServer" reloadable="true" source="org.eclipse.jst.jee.server:MahjongServer"/></Host>
     </Engine>
   </Service>
 </Server>
