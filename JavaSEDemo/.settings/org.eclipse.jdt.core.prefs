@@ -10,6 +10,9 @@ org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enablePreviewFeatures=disabled
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=ignore
 org.eclipse.jdt.core.compiler.release=disabled
+=======
+>>>>>>> e925b77c4fd9e74234dd1b6e1b037d30aa03ec7e
 org.eclipse.jdt.core.compiler.source=1.8
