@@ -11,7 +11,11 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 	<bean id="user-by-static-method" class="com.example.demo.springDemo.entity.User" factory-method="createUser"/>
+
 	<bean id="user-by-instance-method" factory-bean="userFactory" factory-method="createUser"/>
-	
 	<bean id="userFactory" class="com.example.demo.springDemo.bean.factory.DefaultUserFactory"/>
+	
+	<bean id="userFactoryServiceLoader" class="org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean">
+		<property name="serviceType" value="com.example.demo.springDemo.bean.factory.UserFactory"></property>
+	</bean>
 </beans>

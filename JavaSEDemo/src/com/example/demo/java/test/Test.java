@@ -12,9 +12,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.StringJoiner;
 
 public class Test {
 
@@ -63,12 +66,24 @@ public class Test {
 		// rs.getInt(2);
 		// }
 
-		InputStream in = new FileInputStream("/user/wangzheng/test.txt");
-		InputStream bin = new BufferedInputStream(in);
-		byte[] data = new byte[128];
-		while (bin.read(data) != -1) {
-			// ...
-		}
+//		InputStream in = new FileInputStream("/user/wangzheng/test.txt");
+//		InputStream bin = new BufferedInputStream(in);
+//		byte[] data = new byte[128];
+//		while (bin.read(data) != -1) {
+//			// ...
+//		}
+//		StringJoiner sj=new StringJoiner(";");
+//		sj.add(null);
+//		System.out.println(sj.toString());
+		
+		
+//		System.out.println("658_dc_description_expenditureAmount_null".split("_")[4]);
+//		EnumTest.getTypeByName("1").print();
+		
+//		List<String> list=new ArrayList<String>();
+		String s=null;
+		Object o=s;
+		String s2=(String) o;
 	}
 
 }
