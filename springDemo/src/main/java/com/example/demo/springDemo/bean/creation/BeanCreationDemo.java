@@ -1,4 +1,4 @@
-package com.example.demo.springDemo.bean.definition;
+package com.example.demo.springDemo.bean.creation;
 
 import java.util.Iterator;
 import java.util.ServiceLoader;
@@ -9,17 +9,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.example.demo.springDemo.bean.factory.UserFactory;
 import com.example.demo.springDemo.entity.User;
 
-public class BeanInstaniationDemo {
+public class BeanCreationDemo {
 	public static void main(String[] args) {
 		BeanFactory beanFactory=new ClassPathXmlApplicationContext("bean-creation-context.xml");
 		
 //		createByStaticMethod(beanFactory);
 		
-//		createByInstanceMethod(beanFactory);
+//		createByFactoryBeanFactoryMethod(beanFactory);
 		
 //		createByServiceLoader();
 
-		createByServiceLoaderFactoryBean(beanFactory);
+//		createByServiceLoaderFactoryBean(beanFactory);
 		
 	}
 
@@ -43,8 +43,8 @@ public class BeanInstaniationDemo {
 		}
 	}
 
-	private static void createByInstanceMethod(BeanFactory beanFactory) {
-		User user2=beanFactory.getBean("user-by-instance-method",User.class);
+	private static void createByFactoryBeanFactoryMethod(BeanFactory beanFactory) {
+		User user2=beanFactory.getBean("user-by-factory-bean-factory-method",User.class);
 		System.out.println(user2);
 	}
 

@@ -1,1 +1,1 @@
-com.example.demo.springDemo.bean.factory.DefaultUserFactory
+com.example.demo.springDemo.bean.factory.ServiceLoaderUserFactory

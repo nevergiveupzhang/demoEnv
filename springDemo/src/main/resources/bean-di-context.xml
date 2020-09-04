@@ -10,15 +10,8 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-	<bean id="user-by-static-method" name="user-by-static-method;user-by-static-method-alias" class="com.example.demo.springDemo.entity.User" factory-method="createUser"/>
+	<bean id="staticUser" class="com.example.demo.springDemo.entity.User" factory-method="createUser"/>
+	<bean id="factoryBeanFactoryMethodUser" class="com.example.demo.springDemo.bean.factory.DefaultUserFactory"/>
+	<bean id="userRepository" class="com.example.demo.springDemo.entity.UserRepository" autowire="byType"/>
 
-	<bean id="user-by-factory-bean-factory-method" factory-bean="userFactory" factory-method="createUser"/>
-	<bean id="userFactory" class="com.example.demo.springDemo.bean.factory.DefaultUserFactory"/>
-	
-	<bean id="userFactoryServiceLoader" class="org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean">
-		<property name="serviceType" value="com.example.demo.springDemo.bean.factory.UserFactory"></property>
-	</bean>
-
-	<bean class="com.example.demo.springDemo.entity.User" factory-method="createUser"/>
-	<bean class="com.example.demo.springDemo.entity.User" factory-method="createUser2"/>
 </beans>
