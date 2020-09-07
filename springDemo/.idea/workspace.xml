@@ -1,20 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="springDemo:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="14fd6138-2772-46c6-83d9-bdda1f03774f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/bin/com/example/demo/java/dynamicproxy/MonitorUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/bin/com/example/demo/java/dynamicproxy/MonitorUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/bin/com/example/demo/java/dynamicproxy/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/bin/com/example/demo/java/dynamicproxy/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/definition/BeanInstaniationDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/definition/BeanInstaniationDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bean-creation-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean-creation-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/springDemo/AppTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shiroWebDemo/shiroWebDemo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/springDemo_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/springDemo_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lifecycle/AnnotatedBeanDefinitionParsingDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lifecycle/BeanMetadataPropertiesConfigurationDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/custom/ThreadLocalScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/custom/ThreadLocalScopeDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/custom/ThreadScopeAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/web/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/web/WebMvnConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/user.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/web/application-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/web/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lookup/HierarchicalLookupDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lookup/HierarchicalLookupDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customAutowired/CustomAutowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/autowired/CustomAutowired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customAutowired/CustomAutowiredDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/autowired/CustomAutowiredDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customBeanPostProcessor/CustomBeanPostProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/postprocessor/CustomBeanPostProcessorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customBeanPostProcessor/InjectedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/postprocessor/InjectedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/dependency/source/ExternalConfigurableDependencySourceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/dependency/source/ExternalConfigurableDependencySourceDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/dependency/source/ResolvableDependencySourceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/dependency/source/ResolvableDependencySourceDemo.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list id="884a14d6-899a-4785-a0dd-57f2bb8a0b3e" name="Ignored" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/MonitorUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/MonitorUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_8_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springDemo.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,50 +75,25 @@
   <component name="FavoritesManager">
     <favorites_list name="springDemo" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/definition/BeanInstaniationDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="25" column="56" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/factory/UserFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/definition/BeanInstaniationDemo.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -89,130 +102,19 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="springDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="springDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
-    <option name="width" value="1890" />
-    <option name="height" value="960" />
-  </component>
+  <component name="ProjectId" id="1fxF5LjKIevB4JMVHyUVyr1fYMT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="definition" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597130310878" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GIT-KJDS/pms-parent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/web" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -220,27 +122,28 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\demoEnv\springDemo\src\main\resources\web" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.springDemo.dependency.source" />
+      <recent name="com.example.demo.springDemo.bean.lookup" />
+      <recent name="com.example.demo.springDemo.bean.definition" />
+      <recent name="com.example.demo.springDemo.bean.factory" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\demoEnv\springDemo\src\main\resources\web" />
+      <recent name="D:\Code\demoEnv\springDemo\src\main\resources" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="BeanInstaniationDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="D:\programs\Java\jdk1.8.0_20\jre" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.definition.BeanInstaniationDemo" />
+  <component name="RunManager" selected="Application.AnnotatedBeanDefinitionParsingDemo">
+    <configuration name="AnnotatedBeanDefinitionParsingDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.lifecycle.AnnotatedBeanDefinitionParsingDemo" />
       <module name="springDemo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.springDemo.bean.definition.*" />
+          <option name="PATTERN" value="com.example.demo.springDemo.bean.lifecycle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -248,11 +151,172 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BeanMetadataPropertiesConfigurationDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.lifecycle.BeanMetadataPropertiesConfigurationDemo" />
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.springDemo.bean.lifecycle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HierarchicalLookupDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.lookup.HierarchicalLookupDemo" />
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.springDemo.bean.lookup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScopeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.scope.ScopeDemo" />
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.springDemo.bean.scope.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadLocalScopeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.scope.custom.ThreadLocalScopeDemo" />
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.springDemo.bean.scope.custom.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.43" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="springDemo:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/spring-demo" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_springDemo" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64371" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springDemo:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ScopeDemo" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.43" />
+      <item itemvalue="Application.ThreadLocalScopeDemo" />
+      <item itemvalue="Application.HierarchicalLookupDemo" />
+      <item itemvalue="Application.BeanMetadataPropertiesConfigurationDemo" />
+      <item itemvalue="Application.AnnotatedBeanDefinitionParsingDemo" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BeanInstaniationDemo" />
+        <item itemvalue="Application.AnnotatedBeanDefinitionParsingDemo" />
+        <item itemvalue="Application.BeanMetadataPropertiesConfigurationDemo" />
+        <item itemvalue="Application.HierarchicalLookupDemo" />
+        <item itemvalue="Application.ThreadLocalScopeDemo" />
+        <item itemvalue="Application.ScopeDemo" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.17549668" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -260,6 +324,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="14fd6138-2772-46c6-83d9-bdda1f03774f" name="Default Changelist" comment="" />
+      <changelist id="884a14d6-899a-4785-a0dd-57f2bb8a0b3e" name="Ignored" comment="" />
       <created>1596446029401</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -267,190 +332,220 @@
       <workItem from="1596446035335" duration="883000" />
       <workItem from="1596696111665" duration="615000" />
       <workItem from="1597128341013" duration="1989000" />
+      <workItem from="1597151655951" duration="3207000" />
+      <workItem from="1597209644992" duration="13739000" />
+      <workItem from="1597555961194" duration="38000" />
+      <workItem from="1597837949158" duration="10663000" />
+      <workItem from="1598623157880" duration="2641000" />
+      <workItem from="1598669104191" duration="7598000" />
+      <workItem from="1598751321546" duration="10301000" />
+      <workItem from="1599048237804" duration="7688000" />
+      <workItem from="1599229228493" duration="6522000" />
+      <workItem from="1599262119963" duration="5310000" />
+      <workItem from="1599272051411" duration="10487000" />
     </task>
+    <task id="LOCAL-00001" summary="20200904">
+      <created>1599235602803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599235602803</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3487000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4955595" visible="true" weight="0.25788197" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" weight="0.32983023" />
-      <window_info anchor="bottom" id="Messages" weight="0.3285968" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.18755053" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" show_stripe_button="false" weight="0.32983023" />
-      <window_info anchor="right" id="Structure" order="9" sideWeight="0.5044405" weight="0.1196443" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/Code/demoEnv/springDemo" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://D:/programs/Java/jdk1.8.0_20/src.zip!/java/util/ServiceLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="182" column="3" lean-forward="true" selection-start-line="182" selection-start-column="3" selection-end-line="182" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/programs/Java/jdk1.8.0_20/src.zip!/java/util/Iterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/factory/UserFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/springDemo/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/definition/BeanInstaniationDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20200904" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200904" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>springDemo</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="233" y="4" key="#Inspections" timestamp="1597211154439">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="4" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1597211154439" />
+    <state x="233" y="4" key="#Project_Structure" timestamp="1599229477566">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="4" key="#Project_Structure/0.0.1280.689@0.0.1280.689" timestamp="1599229477566" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599265282587">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1599265282587" />
+    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser" timestamp="1599274313803">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1599274313803" />
+    <state x="393" y="258" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1599280523880">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="393" y="258" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.689@0.0.1280.689" timestamp="1599280523880" />
+    <state x="156" y="0" key="CommitChangelistDialog2" timestamp="1599235599715">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="156" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1599235599715" />
+    <state width="559" height="438" key="DebuggerActiveHint" timestamp="1598759587093">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="559" height="438" key="DebuggerActiveHint/0.0.1280.689@0.0.1280.689" timestamp="1598759587093" />
+    <state x="421" y="70" key="FileChooserDialogImpl" timestamp="1599280733211">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="421" y="70" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1599280733211" />
+    <state width="540" height="283" key="GridCell.Tab.0.bottom" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="540" height="283" key="GridCell.Tab.0.center" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="540" height="283" key="GridCell.Tab.0.left" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="540" height="283" key="GridCell.Tab.0.right" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="540" height="283" key="GridCell.Tab.1.bottom" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="540" height="283" key="GridCell.Tab.1.center" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="540" height="283" key="GridCell.Tab.1.left" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="540" height="283" key="GridCell.Tab.1.right" timestamp="1599288248929">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="540" height="283" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1599288248929" />
+    <state width="420" height="218" key="GridCell.Tab.2.bottom" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state width="420" height="218" key="GridCell.Tab.2.center" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state width="420" height="218" key="GridCell.Tab.2.left" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state width="420" height="218" key="GridCell.Tab.2.right" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state width="420" height="218" key="GridCell.Tab.3.bottom" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.3.bottom/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state width="420" height="218" key="GridCell.Tab.3.center" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.3.center/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state width="420" height="218" key="GridCell.Tab.3.left" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.3.left/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state width="420" height="218" key="GridCell.Tab.3.right" timestamp="1599288248920">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="420" height="218" key="GridCell.Tab.3.right/0.0.1280.689@0.0.1280.689" timestamp="1599288248920" />
+    <state x="364" y="42" key="NewModule_or_Project.wizard" timestamp="1599264071819">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="364" y="42" key="NewModule_or_Project.wizard/0.0.1280.689@0.0.1280.689" timestamp="1599264071819" />
+    <state x="198" y="0" key="SettingsEditor" timestamp="1599280733758">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="198" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1599280733758" />
+    <state x="488" y="261" key="VCS.ChangelistChooser" timestamp="1599235561777">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="488" y="261" key="VCS.ChangelistChooser/0.0.1280.689@0.0.1280.689" timestamp="1599235561777" />
+    <state x="471" y="214" key="VCS.EditChangelistDialog" timestamp="1599235526858">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="471" y="214" key="VCS.EditChangelistDialog/0.0.1280.689@0.0.1280.689" timestamp="1599235526858" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1599235604608">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1599235604608" />
+    <state x="56" y="39" key="new project wizard" timestamp="1599264035903">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="56" y="39" key="new project wizard/0.0.1280.689@0.0.1280.689" timestamp="1599264035903" />
+    <state x="297" y="153" key="run.anything.popup" timestamp="1599280725113">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1599280725113" />
+    <state x="621" y="33" width="672" height="678" key="search.everywhere.popup" timestamp="1599273194332">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="621" y="33" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1599273194332" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/creation/BeanDependencyInjectionDemo.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/di/AwareInjectionDemo.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/di/AwareInjectionDemo.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
