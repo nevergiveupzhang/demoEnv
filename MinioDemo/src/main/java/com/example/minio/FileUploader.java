@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
-public class MinioTest {
+public class FileUploader {
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidKeyException, XmlPullParserException {
         try {
             // 使用MinIO服务的URL，端口，Access key和Secret key创建一个MinioClient对象
