@@ -90,41 +90,20 @@
 		<!-- spring end -->
 	</dependencies>
 
-	<!--<build>
+	<build>
 		<plugins>
-			&lt;!&ndash; Tomcat 8 Maven 插件用于构建可执行 war &ndash;&gt;
-			&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat8-maven-plugin &ndash;&gt;
+			<!-- Compiler 插件, 设定JDK版本 -->
 			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat8-maven-plugin</artifactId>
-				<version>2.2</version>
-				<executions>
-					<execution>
-						<id>tomcat-run</id>
-						<goals>
-							&lt;!&ndash; 最终打包成可执行的jar包 &ndash;&gt;
-							<goal>exec-war-only</goal>
-						</goals>
-						<phase>package</phase>
-						<configuration>
-							&lt;!&ndash; ServletContext 路径 &ndash;&gt;
-							<path>/</path>
-						</configuration>
-					</execution>
-				</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<showWarnings>true</showWarnings>
+					<skip>true</skip>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
-	<pluginRepositories>
-		<pluginRepository>
-			&lt;!&ndash; tomcat8-maven-plugin 所在仓库 &ndash;&gt;
-			<id>Alfresco</id>
-			<name>Alfresco Repository</name>
-			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>-->
 </project>

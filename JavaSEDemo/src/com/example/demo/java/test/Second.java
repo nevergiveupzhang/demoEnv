@@ -8,4 +8,8 @@ public class Second implements Interface {
 		
 	}
 
+	protected void f(){
+
+	}
+
 }

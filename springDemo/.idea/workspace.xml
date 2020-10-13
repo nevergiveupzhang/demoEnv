@@ -7,52 +7,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fd6138-2772-46c6-83d9-bdda1f03774f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shiroWebDemo/shiroWebDemo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/springDemo_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/springDemo_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lifecycle/AnnotatedBeanDefinitionParsingDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lifecycle/BeanMetadataPropertiesConfigurationDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/custom/ThreadLocalScope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/custom/ThreadLocalScopeDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/custom/ThreadScopeAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/web/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/web/WebMvnConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/user.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/web/application-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/web/spring-mvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__com_auth0_java_jwt_3_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/classloader/ClassLoaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/classloader/MyClassLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/classloader/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/systemout/SystemOutTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/tools/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/tools/pdf/Coordinate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/tools/pdf/CoordinatePageDrawer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/tools/pdf/PdfTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MinioDemo/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MinioDemo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MinioDemo/src/main/java/com/example/minio/MinioTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MinioDemo/src/main/resources/META-INF/services/org.xmlpull.v1.XmlPullParserFactory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/JavaSEDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/JavaSEDemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/example.log" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/example.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/test/Second.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/test/Second.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/src/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/src/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/BasicDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/BasicDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/DeprecatedClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/DeprecatedClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/DeprecatedDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/DeprecatedDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/annotation/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/ForRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/ForRun.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/concurrent/SychronizeDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/ExecutionTimeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/ExecutionTimeHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/MonitorUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/MonitorUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/PrintParamHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/PrintParamHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/ProxyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/ProxyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/grammar/RetryDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/grammar/RetryDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/jwt/JwtDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/jwt/JwtDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/reflect/ReflectDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/reflect/ReflectDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/reflect/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/reflect/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/ForEachDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/ForEachDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/StreamDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/StreamDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/StreamDemo2$User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/StreamDemo2$User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/StreamDemo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stream/StreamDemo2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stringjoin/StringJoinDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/stringjoin/StringJoinDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/B.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/Test$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/Test$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/test/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/threadlocal/ThreadLocalDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/threadlocal/ThreadLocalDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/threadpool/ThreadPoolDemo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/threadpool/ThreadPoolDemo$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/threadpool/ThreadPoolDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/threadpool/ThreadPoolDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/tools/FindClassInJar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/tools/FindClassInJar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/tools/StringHumpAndCaseTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/tools/StringHumpAndCaseTool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/tryCatch/TryCatchDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/tryCatch/TryCatchDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lookup/HierarchicalLookupDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lookup/HierarchicalLookupDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customAutowired/CustomAutowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/autowired/CustomAutowired.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customAutowired/CustomAutowiredDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/autowired/CustomAutowiredDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customBeanPostProcessor/CustomBeanPostProcessorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/postprocessor/CustomBeanPostProcessorDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/customBeanPostProcessor/InjectedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/annotation/postprocessor/InjectedUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/dependency/source/ExternalConfigurableDependencySourceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/dependency/source/ExternalConfigurableDependencySourceDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/dependency/source/ResolvableDependencySourceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/dependency/source/ResolvableDependencySourceDemo.java" afterDir="false" />
     </list>
     <list id="884a14d6-899a-4785-a0dd-57f2bb8a0b3e" name="Ignored" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/MonitorUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSEDemo/target/classes/com/example/demo/java/dynamicproxy/MonitorUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_8_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springDemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +105,19 @@
   <component name="FavoritesManager">
     <favorites_list name="springDemo" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/services/com.example.demo.springDemo.bean.factory.UserFactory">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -85,8 +128,24 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>destroy</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/Test.java" />
+        <option value="$PROJECT_DIR$/../JavaSEDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/tools/ReadPdfTool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lifecycle/AnnotatedBeanDefinitionParsingDemo.java" />
+      </list>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -102,8 +161,80 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="springDemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1176" />
+    <option name="y" value="66" />
+    <option name="width" value="717" />
+    <option name="height" value="852" />
+  </component>
   <component name="ProjectId" id="1fxF5LjKIevB4JMVHyUVyr1fYMT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -113,14 +244,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597130310878" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/web" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602588204857" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -137,7 +268,19 @@
       <recent name="D:\Code\demoEnv\springDemo\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AnnotatedBeanDefinitionParsingDemo">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Test">
     <configuration name="AnnotatedBeanDefinitionParsingDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.lifecycle.AnnotatedBeanDefinitionParsingDemo" />
       <module name="springDemo" />
@@ -177,12 +320,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScopeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.scope.ScopeDemo" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.springDemo.bean.Test" />
       <module name="springDemo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.demo.springDemo.bean.scope.web.*" />
+          <option name="PATTERN" value="com.example.demo.springDemo.bean.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -199,6 +342,53 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="JavaSEDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="JavaSEDemo" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -278,20 +468,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ScopeDemo" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.43" />
       <item itemvalue="Application.ThreadLocalScopeDemo" />
       <item itemvalue="Application.HierarchicalLookupDemo" />
       <item itemvalue="Application.BeanMetadataPropertiesConfigurationDemo" />
       <item itemvalue="Application.AnnotatedBeanDefinitionParsingDemo" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.43" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.AnnotatedBeanDefinitionParsingDemo" />
         <item itemvalue="Application.BeanMetadataPropertiesConfigurationDemo" />
         <item itemvalue="Application.HierarchicalLookupDemo" />
         <item itemvalue="Application.ThreadLocalScopeDemo" />
-        <item itemvalue="Application.ScopeDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -343,6 +533,14 @@
       <workItem from="1599229228493" duration="6522000" />
       <workItem from="1599262119963" duration="5310000" />
       <workItem from="1599272051411" duration="10487000" />
+      <workItem from="1599543918029" duration="1139000" />
+      <workItem from="1599550297581" duration="1609000" />
+      <workItem from="1599631977056" duration="982000" />
+      <workItem from="1600074640458" duration="4281000" />
+      <workItem from="1600334872658" duration="1821000" />
+      <workItem from="1600680544934" duration="650000" />
+      <workItem from="1600845979206" duration="27000" />
+      <workItem from="1602587520102" duration="686000" />
     </task>
     <task id="LOCAL-00001" summary="20200904">
       <created>1599235602803</created>
@@ -354,6 +552,49 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11195000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33225545" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Persistence" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3285968" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.3285968" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.67142856" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -363,7 +604,12 @@
         <entry key="1">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -382,6 +628,14 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -391,6 +645,20 @@
       <set>
         <option value="1" />
       </set>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
@@ -533,19 +801,229 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/creation/BeanDependencyInjectionDemo.java</url>
           <line>9</line>
+          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/di/AwareInjectionDemo.java</url>
           <line>25</line>
+          <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/di/AwareInjectionDemo.java</url>
           <line>30</line>
+          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="95" column="20" lean-forward="true" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/scope/custom/ThreadLocalScope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/tools/ReadPdfTool.java" />
+    <entry file="file://$PROJECT_DIR$/../JavaSEDemo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../JavaSEDemo/src/com/example/demo/java/tools/FindClassInJar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="78" column="84" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar!/org/springframework/beans/factory/xml/XmlBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/programs/Java/jdk1.8.0_20/src.zip!/java/lang/ref/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar!/org/springframework/beans/factory/config/DestructionAwareBeanPostProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.8.RELEASE/spring-core-5.2.8.RELEASE.jar!/org/springframework/core/ResolvableType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="898" column="49" lean-forward="true" selection-start-line="898" selection-start-column="49" selection-end-line="898" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lifecycle/BeanMetadataPropertiesConfigurationDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/lifecycle/AnnotatedBeanDefinitionParsingDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="121" column="82" selection-start-line="121" selection-start-column="48" selection-end-line="121" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/factory/UserFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/springDemo/bean/factory/ServiceLoaderUserFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/user.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/services/com.example.demo.springDemo.bean.factory.UserFactory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>springDemo:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JavaSEDemo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.springframework:spring-aop:5.2.8.RELEASE</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
