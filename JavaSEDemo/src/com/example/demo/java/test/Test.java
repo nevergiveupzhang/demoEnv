@@ -131,8 +131,11 @@ public class Test {
 //		match("预算说明书 顶顶顶顶 项目负责人签字",
 //				"预算说明书(.*?)项目负责人签字");
 
-		String s = "（1）顶顶顶顶（2）反反复复";
-		s.replace("(\\d+)","");
+//		String s = "（1）顶顶顶顶（2）反反复复";
+//		s.replace("(\\d+)","");
+
+		String s = "item\\aa\\a.jpg";
+		System.out.println(s.substring(s.lastIndexOf(File.separatorChar)+1));
 	}
 
 	private static String match(String content,String reg){
