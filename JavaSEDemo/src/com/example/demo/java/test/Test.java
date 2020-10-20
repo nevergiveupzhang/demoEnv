@@ -128,14 +128,15 @@ public class Test {
 //		System.out.println(ll.pollLast());
 //		System.out.println(ll.pollLast());
 
-//		match("预算说明书 顶顶顶顶 项目负责人签字",
-//				"预算说明书(.*?)项目负责人签字");
+		String s = "aa\r\nbb\r\ncc";
+		s = match(s,"aa([\\s\\S]*)cc");
+		System.out.println(s);
 
 //		String s = "（1）顶顶顶顶（2）反反复复";
 //		s.replace("(\\d+)","");
 
-		String s = "item\\aa\\a.jpg";
-		System.out.println(s.substring(s.lastIndexOf(File.separatorChar)+1));
+//		String s = "item\\aa\\a.jpg";
+//		System.out.println(s.substring(s.lastIndexOf(File.separatorChar)+1));
 	}
 
 	private static String match(String content,String reg){
