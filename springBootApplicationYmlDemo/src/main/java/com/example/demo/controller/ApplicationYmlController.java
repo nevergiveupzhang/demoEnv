@@ -38,5 +38,9 @@ public class ApplicationYmlController {
 		ApplicationYmlController bean=ApplicationContextManager.getServiceByName("applicationYmlController", ApplicationYmlController.class);
 		return DataUtil.toJsonStr(bean.mapConfig);
 	}
-	
+
+	@RequestMapping("/jsp")
+	public String jsp(){
+		return "user";
+	}
 }
