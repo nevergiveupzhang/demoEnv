@@ -128,15 +128,21 @@ public class Test {
 //		System.out.println(ll.pollLast());
 //		System.out.println(ll.pollLast());
 
-		String s = "aa\r\nbb\r\ncc";
-		s = match(s,"aa([\\s\\S]*)cc");
-		System.out.println(s);
+//		String s = "aa\r\nbb\r\ncc";
+//		s = match(s,"aa([\\s\\S]*)cc");
+//		System.out.println(s);
 
 //		String s = "（1）顶顶顶顶（2）反反复复";
 //		s.replace("(\\d+)","");
 
 //		String s = "item\\aa\\a.jpg";
 //		System.out.println(s.substring(s.lastIndexOf(File.separatorChar)+1));
+
+//		for(char start='a';start<='z';start++){
+//			System.out.println(start);
+//		}
+
+		System.out.println(String.valueOf(""+'a'+'b'));
 	}
 
 	private static String match(String content,String reg){
@@ -150,4 +156,10 @@ public class Test {
 		}
 		return fieldValue;
 	}
+
+	private int a(int b){
+		return 0;
+	}
+
+
 }
