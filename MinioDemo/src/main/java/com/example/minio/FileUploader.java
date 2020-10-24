@@ -4,6 +4,7 @@ import io.minio.MinioClient;
 import io.minio.Result;
 import io.minio.errors.*;
 import io.minio.messages.Item;
+import io.minio.policy.PolicyType;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.*;
@@ -17,7 +18,9 @@ public class FileUploader {
     static {
         // 使用MinIO服务的URL，端口，Access key和Secret key创建一个MinioClient对象
         try {
-            minioClient = new MinioClient(url, "minioadmin", "minioadmin");
+//            minioClient = new MinioClient(url, "minioadmin", "minioadmin");
+
+            minioClient = new MinioClient(url);
         } catch (InvalidEndpointException e) {
             e.printStackTrace();
         } catch (InvalidPortException e) {
@@ -25,17 +28,24 @@ public class FileUploader {
         }
 
     }
-    public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidKeyException, XmlPullParserException, InsufficientDataException, InternalException, NoResponseException, RegionConflictException, ErrorResponseException, InvalidArgumentException, InvalidBucketNameException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidKeyException, XmlPullParserException, InsufficientDataException, InternalException, NoResponseException, RegionConflictException, ErrorResponseException, InvalidArgumentException, InvalidBucketNameException, InvalidObjectPrefixException {
 //        putObject();
-        putObject("test");
+//        putObject("test");
 //        putObject("ccc","ccc2.png");
+//        bucketPolicy();
 //        getObject();
-//        getObject("aaa","aaa.png");
+        getObject("test","test.png");
 //        listObjects();
 //        removeBucket();
 //        forceRemoveBucket("aaa");
 //        createBucket();
 //        forceCreateBucket("aaa");
+    }
+
+    private static void bucketPolicy() throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, ErrorResponseException, NoResponseException, InvalidBucketNameException, XmlPullParserException, InternalException, RegionConflictException, InvalidArgumentException, InvalidObjectPrefixException {
+        minioClient.makeBucket("test");
+        minioClient.putObject("test","test.png","E:\\Tmp\\test.png");
+        minioClient.setBucketPolicy("test","test", PolicyType.READ_ONLY);
     }
 
     private static void forceCreateBucket(String bucketName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException, RegionConflictException {
