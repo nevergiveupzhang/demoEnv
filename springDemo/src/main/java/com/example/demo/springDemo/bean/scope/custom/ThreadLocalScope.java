@@ -1,6 +1,5 @@
 package com.example.demo.springDemo.bean.scope.custom;
 
-import javafx.beans.binding.ObjectBinding;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.config.Scope;
 import org.springframework.core.NamedThreadLocal;
