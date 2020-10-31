@@ -142,8 +142,13 @@ public class Test {
 //			System.out.println(start);
 //		}
 
-		System.out.println(String.valueOf(""+'a'+'b'));
+//		System.out.println(String.valueOf(""+'a'+'b'));
+
+		File file = new File("D:\\programs\\mysql-5.7.23-winx64\\data");
+		String s = file.listFiles()[0].getPath();
+		System.out.println(s);
 	}
+
 
 	private static String match(String content,String reg){
 		String fieldValue="";
