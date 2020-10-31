@@ -4,17 +4,19 @@ import java.io.File;
 
 public class MakeDirTest {
     public static void main(String[] args) {
-        createServerCmd();
-//        createLocalCmd();
+//        createServerCmd();
+        createLocalCmd();
     }
 
     private static void createLocalCmd() {
+        deleteDir(new File("D:\\Data\\minioTemplate\\qhdx_minio_data"));
+
         StringBuilder local = new StringBuilder();
         local.append("minio server ");
         String dir = "";
         for(int i=1;i<=4;i++){
-            local.append("E:/Data/qhdx_minio_data2/data"+i+" ");
-            dir = "E:\\Data\\minioTemplate\\qhdx_minio_data\\data"+i;
+            local.append("D:/Data/qhdx_minio_data/data"+i+" ");
+            dir = "D:\\Data\\minioTemplate\\qhdx_minio_data\\data"+i;
             File file = new File(dir);
 
             if(file.exists()){

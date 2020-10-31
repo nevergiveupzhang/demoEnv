@@ -18,7 +18,11 @@ public class FileUploader {
 
     private static MinioClient minioClient;
 //    private final static String url = "http://192.168.106.62:9000/";
-    private final static String url = "http://192.168.50.22:9000/";
+//    private final static String url = "http://192.168.50.22:9000/";
+    private final static String url = "http://127.0.0.1:9000/";
+
+    private final static String TEST_PNG_FILE ="D:\\Tmp\\test.png";
+//    private final static String TEST_PNG_FILE ="E:\\Tmp\\test.png";
     static {
         // 使用MinIO服务的URL，端口，Access key和Secret key创建一个MinioClient对象
         try {
@@ -98,7 +102,7 @@ public class FileUploader {
             if(i%5000 == 1){
                 log.info("第"+(i/5000 + 1)+"个5000开始时间："+new Date());
             }
-            minioClient.putObject(bucketName,bucketNamePrefix+i+".png","E:\\Tmp\\test.png");
+            minioClient.putObject(bucketName,bucketNamePrefix+i+".png",TEST_PNG_FILE);
         }
         log.info("结束时间："+new Date());
         log.info(System.currentTimeMillis() - start);
@@ -148,7 +152,7 @@ public class FileUploader {
 
     private static void bucketPolicy() throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, ErrorResponseException, NoResponseException, InvalidBucketNameException, XmlPullParserException, InternalException, RegionConflictException, InvalidArgumentException, InvalidObjectPrefixException {
         minioClient.makeBucket("test");
-        minioClient.putObject("test","test.png","E:\\Tmp\\test.png");
+        minioClient.putObject("test","test.png",TEST_PNG_FILE);
         minioClient.setBucketPolicy("test","test", PolicyType.READ_ONLY);
     }
 
@@ -264,7 +268,7 @@ public class FileUploader {
                     // 创建一个名为asiatrip的存储桶，用于存储照片的zip文件。
                     minioClient.makeBucket(bucketName);
                 }
-                minioClient.putObject(bucketName,objectName, "E:\\Tmp\\test.png");
+                minioClient.putObject(bucketName,objectName, TEST_PNG_FILE);
             }
             System.out.println("E:\\Tmp\\test.jpg is successfully uploaded as test.jpg to `test` bucket.");
         } catch(MinioException e) {
@@ -283,7 +287,7 @@ public class FileUploader {
                     // 创建一个名为asiatrip的存储桶，用于存储照片的zip文件。
                     minioClient.makeBucket(bucketName);
                 }
-                minioClient.putObject(bucketName,bucketName+".png", "E:\\Tmp\\test.png");
+                minioClient.putObject(bucketName,bucketName+".png", TEST_PNG_FILE);
             }
             System.out.println("E:\\Tmp\\test.jpg is successfully uploaded as test.jpg to `test` bucket.");
         } catch(MinioException e) {
