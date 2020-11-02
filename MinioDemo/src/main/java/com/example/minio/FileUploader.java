@@ -32,8 +32,8 @@ public class FileUploader {
 //        putObject("test");
 //        putObject("test2","test1.png");
 //        buckssetPolicy();
-//        getObject();
-//        getObject("test3","test1/test1.pdf");
+        getObject();
+//        getObject("test","test1.png");
 //        listObjects();
 //        removeBucket();
 //        forceRemoveBucket("aaa");
@@ -42,7 +42,7 @@ public class FileUploader {
 
 //        upload("D:\\programs\\mysql-5.7.23-winx64\\data");
 
-        upload();
+//        upload();
 
 //        removeObject();
 
@@ -218,8 +218,8 @@ public class FileUploader {
 
     private static void getObject() throws  NoSuchAlgorithmException, InvalidKeyException, IOException {
         try {
-            InputStream is = minioClient.getObject("test","test.png");
-            writeToLocal(is,"E:\\Tmp\\copy.jpg");
+            InputStream is = minioClient.getObject(GetObjectArgs.builder().bucket("test").object("test1.png").build());
+            writeToLocal(is,"D:\\Tmp\\copy.jpg");
         } catch(MinioException e) {
             System.out.println("Error occurred: " + e);
         }
