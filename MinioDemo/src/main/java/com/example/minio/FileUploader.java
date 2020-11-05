@@ -15,12 +15,12 @@ public class FileUploader {
     private static final Logger log = Logger.getLogger(FileUploader.class);
 
     private static MinioClient minioClient;
-//    private final static String url = "http://192.168.106.62:9000/";
+    private final static String url = "http://192.168.106.62:9000/";
 //    private final static String url = "http://192.168.50.22:9000/";
-    private final static String url = "http://127.0.0.1:9000/";
+//    private final static String url = "http://127.0.0.1:9000/";
 
-    private final static String TEST_PNG_FILE ="D:\\Tmp\\test.png";
-//    private final static String TEST_PNG_FILE ="E:\\Tmp\\test.png";
+//    private final static String TEST_PNG_FILE ="D:\\Tmp\\test.png";
+    private final static String TEST_PNG_FILE ="E:\\Tmp\\test.png";
     static {
         // 使用MinIO服务的URL，端口，Access key和Secret key创建一个MinioClient对象
         minioClient = new MinioClient(url, "minioadmin", "minioadmin");
@@ -218,8 +218,8 @@ public class FileUploader {
 
     private static void getObject() throws  NoSuchAlgorithmException, InvalidKeyException, IOException {
         try {
-            InputStream is = minioClient.getObject(GetObjectArgs.builder().bucket("test").object("test1.png").build());
-            writeToLocal(is,"D:\\Tmp\\copy.jpg");
+            InputStream is = minioClient.getObject(GetObjectArgs.builder().bucket("hljzyydx-item-attachment").object("2020110219122182579.pdf").build());
+            writeToLocal(is,"E:\\Tmp\\copy.jpg");
         } catch(MinioException e) {
             System.out.println("Error occurred: " + e);
         }
@@ -229,16 +229,39 @@ public class FileUploader {
         File target = new File(tmpPath);
         target.createNewFile();
         OutputStream os = new FileOutputStream(target);
-        byte []bytes = new byte[1024];
-        int bytesRead = 0;
-        while((bytesRead = is.read(bytes)) > 0){
-            os.write(bytes,0,bytesRead);
-        }
+//        byte []bytes = new byte[1024];
+//        int bytesRead = 0;
+//        while((bytesRead = is.read(bytes)) > 0){
+//            os.write(bytes,0,bytesRead);
+//        }
+//
+//        is.close();
+//        os.flush();
+//        os.close();
 
-        is.close();
-        os.flush();
-        os.close();
+        write(is,os);
     }
+
+    private static void write(InputStream fis, OutputStream os ) throws IOException {
+        try {
+            int count = 0;
+            byte[] buffer = new byte[1024 * 1024];
+            while ((count = fis.read(buffer)) != -1){
+                os.write(buffer, 0, count);
+                os.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (os != null){
+                os.close();
+            }
+            if (fis != null){
+                fis.close();
+            }
+        }
+    }
+
     private static void listObjects() throws  NoSuchAlgorithmException, InvalidKeyException, IOException {
         try {
             // 检查存储桶是否已经存在

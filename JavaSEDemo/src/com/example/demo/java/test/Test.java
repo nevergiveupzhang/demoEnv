@@ -18,6 +18,7 @@ import java.text.DateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class Test {
 
@@ -144,12 +145,56 @@ public class Test {
 
 //		System.out.println(String.valueOf(""+'a'+'b'));
 
-		File file = new File("D:\\programs\\mysql-5.7.23-winx64\\data");
-		String s = file.listFiles()[0].getPath();
-		System.out.println(s);
+//		File file = new File("D:\\programs\\mysql-5.7.23-winx64\\data");
+//		String s = file.getPath();
+//		System.out.println(s);
+
+//		System.out.println(trimStart("abcd_dddjfjls","abc"));
+
+
+//		File file = new File("E:\\pms_config\\upload\\item\\attachment\\2020110220255983266.pdf");
+//		String filePath = file.getPath();
+//		String fileName = file.getName();
+//		String localDir = new File("E:\\pms_config\\upload").getPath();
+//
+//		String relativeFilePath = trimStart(filePath,localDir);
+//		String resourceRelativePath = trimEnd(relativeFilePath,fileName);
+//
+//		String result = resourceRelativePath.substring(1,resourceRelativePath.lastIndexOf(File.separator)).replace(File.separator,"-");
+//
+//		System.out.println(result);
+
+		Set<String> set = new HashSet<>();
+		set.add("A");
+		set.add("B");
+
+		set.stream().map(s -> s.toLowerCase()).distinct().collect(Collectors.toSet());
+
+		set.stream().forEach(System.out::println);
+
 	}
 
+	public static String trimStart(String originalStr, String prefix) {
+		if (originalStr == null || originalStr.length() == 0 || prefix == null || prefix.length() == 0) {
+			return originalStr;
+		}
 
+		if (originalStr.startsWith(prefix)) {
+			return (originalStr.substring(prefix.length()));
+		}
+		return originalStr;
+	}
+
+	public static String trimEnd(String originalStr, String suffix) {
+		if (originalStr == null || originalStr.length() == 0 || suffix == null || suffix.length() == 0) {
+			return originalStr;
+		}
+
+		if (originalStr.endsWith(suffix)) {
+			return (originalStr.substring(0,originalStr.length()-suffix.length()));
+		}
+		return originalStr;
+	}
 	private static String match(String content,String reg){
 		String fieldValue="";
 		Pattern pattern = Pattern.compile(reg);// 匹配的模式

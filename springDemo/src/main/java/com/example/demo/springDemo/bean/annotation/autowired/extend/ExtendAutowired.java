@@ -1,4 +1,4 @@
-package com.example.demo.springDemo.bean.annotation.autowired;
+package com.example.demo.springDemo.bean.annotation.autowired.extend;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -8,5 +8,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Autowired
-public @interface CustomAutowired {
+public @interface ExtendAutowired {
 }

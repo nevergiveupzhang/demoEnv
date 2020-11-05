@@ -1,11 +1,11 @@
-package com.example.demo.springDemo.bean.annotation.autowired;
+package com.example.demo.springDemo.bean.annotation.autowired.extend;
 
 import com.example.demo.springDemo.entity.User;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class CustomAutowiredDemo {
-    @CustomAutowired
+public class ExtendAutowiredDemo {
+    @ExtendAutowired
     private User user;
 
     public static void main(String[] args) {
@@ -14,8 +14,8 @@ public class CustomAutowiredDemo {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(applicationContext);
         reader.loadBeanDefinitions("classpath:bean-lookup-context.xml");
 
-        applicationContext.register(CustomAutowiredDemo.class);
+        applicationContext.register(ExtendAutowiredDemo.class);
         applicationContext.refresh();
-        System.out.println(applicationContext.getBean(CustomAutowiredDemo.class).user);
+        System.out.println(applicationContext.getBean(ExtendAutowiredDemo.class).user);
     }
 }
