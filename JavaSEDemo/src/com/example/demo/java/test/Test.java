@@ -2,6 +2,8 @@ package com.example.demo.java.test;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.java.entity.User;
+import jdk.internal.util.xml.impl.Input;
+import org.mozilla.universalchardet.UniversalDetector;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -9,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -19,6 +22,9 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
 
 public class Test {
 
@@ -164,14 +170,39 @@ public class Test {
 //
 //		System.out.println(result);
 
-		Set<String> set = new HashSet<>();
-		set.add("A");
-		set.add("B");
+//		Set<String> set = new HashSet<>();
+//		set.add("A");
+//		set.add("B");
+//
+//		set.stream().map(s -> s.toLowerCase()).distinct().collect(Collectors.toSet());
+//
+//		set.stream().forEach(System.out::println);
 
-		set.stream().map(s -> s.toLowerCase()).distinct().collect(Collectors.toSet());
+//		System.out.println(File.separator);
+//
+//		File file = new File("E:/Tmp/testUpload");
+//		System.out.println(file.getPath());
+//
+//		File inputFile = new File("E:/Tmp/testUpload/testUpload.zip");
+//		InputStream in = new BufferedInputStream(new FileInputStream(inputFile));
+//		ZipInputStream zin = new ZipInputStream(in, Charset.forName("gbk"));
+//		ZipEntry ze;
+//		while((ze = zin.getNextEntry()) != null ){
+//			System.out.println(ze.getName());
+//		}
 
-		set.stream().forEach(System.out::println);
+//		checkArgs(1,"2");
 
+	}
+
+
+	private static <T> void checkArgs(T ... args) {
+		if(args.length == 0){
+			return;
+		}
+		for(T arg : args){
+			Objects.requireNonNull(arg);
+		}
 	}
 
 	public static String trimStart(String originalStr, String prefix) {
