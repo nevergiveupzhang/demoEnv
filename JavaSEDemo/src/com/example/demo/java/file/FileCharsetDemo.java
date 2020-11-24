@@ -6,7 +6,37 @@ import java.io.*;
 
 public class FileCharsetDemo {
     public static void main(String[] args) throws IOException {
-        System.out.println(charset("E:\\Tmp\\1.txt"));
+        long start = System.currentTimeMillis();
+//        String encoding = getDecoder(new BufferedInputStream(new FileInputStream(new File("E:\\Tmp\\ansi3.txt"))));
+      String encoding =   getCharsetCode("E:\\Tmp\\utf8-2.txt");
+        long end = System.currentTimeMillis();
+        System.out.println(encoding);
+        System.out.println(end - start);
+    }
+
+    private static String getCharsetCode(String fileName) throws IOException{
+
+        BufferedInputStream bin = new BufferedInputStream(new FileInputStream(fileName));
+        int first = bin.read();
+        int second = bin.read();
+        int p = (first << 8) + second;
+
+        String code = null;
+
+        switch (p) {
+            case 0xefbb:
+                code = "UTF-8";
+                break;
+            case 0xfffe:
+                code = "Unicode";
+                break;
+            case 0xfeff:
+                code = "UTF-16BE";
+                break;
+            default:
+                code = "GBK";
+        }
+        return code;
     }
 
     public static String charset(String path) {
