@@ -1,4 +1,4 @@
-package com.example.demo.springDemo.bean.annotation.postprocessor;
+package com.example.demo.springDemo.bean.annotation.autowired.custom;
 
 import java.lang.annotation.*;
 

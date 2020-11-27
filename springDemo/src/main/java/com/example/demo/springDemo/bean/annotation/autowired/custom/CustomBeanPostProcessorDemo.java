@@ -1,4 +1,4 @@
-package com.example.demo.springDemo.bean.annotation.postprocessor;
+package com.example.demo.springDemo.bean.annotation.autowired.custom;
 
 import com.example.demo.springDemo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
