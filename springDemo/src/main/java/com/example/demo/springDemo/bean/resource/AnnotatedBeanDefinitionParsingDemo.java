@@ -1,9 +1,7 @@
-package com.example.demo.springDemo.bean.lifecycle;
+package com.example.demo.springDemo.bean.resource;
 
-import com.example.demo.springDemo.entity.User;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
-import org.springframework.context.annotation.Bean;
 
 public class AnnotatedBeanDefinitionParsingDemo {
     public static void main(String[] args) {

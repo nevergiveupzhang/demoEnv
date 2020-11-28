@@ -1,11 +1,10 @@
 package com.example.demo.java.test;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Test2 {
-    public static void main(String[] args) {
-        test("ÖÐÎÄ");
+    public static void main(String[] args ) {
+
     }
 
-    private static void test(String s){
-        System.out.println(s);
-    }
 }
