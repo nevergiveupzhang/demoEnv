@@ -4,19 +4,20 @@ import com.example.demo.springDemo.entity.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
-import org.springframework.web.context.annotation.SessionScope;
 
 @Configuration
-public class WebMvnConfiguration {
+public class WebMvcConfiguration {
+    private int count = 0;
     @Bean
+    @Scope("prototype")
 //    @RequestScope
 //    @SessionScope
-    @ApplicationScope
+//    @ApplicationScope
     public User user(){
         User user = new User();
         user.setId(System.nanoTime());
+        user.setName("zhangsan"+(++count));
         return user;
     }
 }

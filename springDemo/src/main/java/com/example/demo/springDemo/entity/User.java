@@ -22,11 +22,16 @@ public class User implements BeanNameAware {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + "]";
+		return "User{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", beanName='" + beanName + '\'' +
+				'}';
 	}
-	
+
 	public static User createUser(){
 		User user=new User();
 		user.setName("user-by-static-method");
