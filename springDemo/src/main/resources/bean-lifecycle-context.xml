@@ -14,4 +14,11 @@
         <property name="id" value="1"></property>
         <property name="name" value="zhangsan"></property>
     </bean>
+
+
+    <bean id="user2" class="com.example.demo.springDemo.bean.lifecycle.AfterSingletonInstantiatedDemo$User">
+        <property name="id" value="2"></property>
+        <property name="name" value="zhangsan2"></property>
+    </bean>
+
 </beans>
