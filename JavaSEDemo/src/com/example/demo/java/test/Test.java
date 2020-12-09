@@ -142,8 +142,8 @@ public class Test {
 //		String s = "（1）顶顶顶顶（2）反反复复";
 //		s.replace("(\\d+)","");
 
-		String s = "item\\aa\\a.jpg";
-		System.out.println(s.substring(s.lastIndexOf(".")+1));
+//		String s = "item\\aa\\a.jpg";
+//		System.out.println(s.substring(s.lastIndexOf(".")+1));
 
 //		for(char start='a';start<='z';start++){
 //			System.out.println(start);
@@ -192,6 +192,7 @@ public class Test {
 //		}
 
 //		checkArgs(1,"2");
+		System.out.println("123.123".replaceFirst("123","1"));
 
 
 	}

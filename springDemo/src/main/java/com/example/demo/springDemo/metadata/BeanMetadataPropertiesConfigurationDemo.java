@@ -1,4 +1,4 @@
-package com.example.demo.springDemo.bean.metadata;
+package com.example.demo.springDemo.metadata;
 
 import com.example.demo.springDemo.entity.User;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
