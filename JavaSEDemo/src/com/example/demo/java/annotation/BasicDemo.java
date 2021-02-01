@@ -1,19 +1,15 @@
 package com.example.demo.java.annotation;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
-
 public class BasicDemo {
+	@Test("")
+	private static String value;
+
+	@ParamValidators({"id,age#"+ParamValidate.INT,"name#"+ParamValidate.STRING})
+	public void f(){
+
+	}
+
 	public static void main(String[] args) {
-		Class cls = User.class;
-
-		while(cls != null){
-			Field []fields = cls.getDeclaredFields();
-			for(Field field : fields){
-				System.out.println(field.getName());
-			}
-			cls = cls.getSuperclass();
-		}
-
+		System.out.println(value);
 	}
 }
