@@ -5,10 +5,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Test {
     public static void main(String[] args ) {
-        System.out.println(new Object());
-        System.out.println(new Object());
-        System.out.println(new Object());
-        System.out.println(new Object());
+        List<String> list = Arrays.asList("a","b");
+        list.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.hashCode() - o2.hashCode();
+            }
+        });
+
+        list.stream().forEach(System.out::print);
     }
 
 
