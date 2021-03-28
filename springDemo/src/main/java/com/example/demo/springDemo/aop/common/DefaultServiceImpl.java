@@ -1,8 +1,8 @@
 package com.example.demo.springDemo.aop.common;
 
-public class DefaultEchoService implements IEchoService{
+public class DefaultServiceImpl implements IService {
     @Override
-    public String echo(String message) {
+    public String execute(String message) {
         return "[ECHO] " + message;
     }
 }

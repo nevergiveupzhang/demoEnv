@@ -8,13 +8,12 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AspectJAnnotationUsingApiDemo {
+public class AspectJProxyFactoryAdviceDemo {
     public static void main(String[] args) {
         //被代理对象
         Map<String,Object> cache = new HashMap<>();
 
         AspectJProxyFactory proxyFactory = new AspectJProxyFactory(cache);
-        proxyFactory.addAspect(AspectConfiguration.class);
 
         proxyFactory.addAdvice(new MethodBeforeAdvice() {
             @Override
