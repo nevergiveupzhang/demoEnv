@@ -11,8 +11,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Test2 {
-    public static void main(String[] args ){
-        f();
+    private int i = 8;
+
+    public Test2() throws InterruptedException {
+        System.out.println(this.i);
+        new Thread(()->{
+            System.out.println(this.i);
+        }).start();
+    }
+    public static void main(String[] args ) throws InterruptedException {
+        new Test2();
     }
 
     public static int f(){

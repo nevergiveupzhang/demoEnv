@@ -70,7 +70,7 @@ public class UserController {
 	}
 	@RequestMapping("/query")
 	@ResponseBody
-	public String getUser(@RequestParam String name,@RequestParam int age) {
+	public String getUser(@RequestParam(required = false) String name,@RequestParam(required = false) Integer age) {
 		Map<String,Object> params=new HashMap<String,Object>();
 		params.put("name", name);
 		params.put("age", age);

@@ -1,4 +1,4 @@
-package com.example.demo.java.concurrent;
+package com.example.demo.java.concurrent.visibility;
 
 public class CpuCacheVisibilityDemo {
     private long count = 0;
