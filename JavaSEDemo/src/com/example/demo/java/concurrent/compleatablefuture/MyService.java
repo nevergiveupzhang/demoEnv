@@ -10,12 +10,13 @@ public class MyService {
     public MyService() {
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
         executorService.scheduleAtFixedRate(()->{
-            if(blockingQueue.isEmpty()){
+            int size = blockingQueue.size();
+            if(size == 0){
                 return;
             }
             List<Map<String,String>> params = new ArrayList<>();
             List<Request> requests = new ArrayList<>();
-            for(int i = 0; i< blockingQueue.size(); i++){
+            for(int i = 0; i< size; i++){
                 Request request = blockingQueue.poll();
                 requests.add(request);
                 Map<String,String> param = new HashMap<>();
@@ -35,7 +36,7 @@ public class MyService {
                     }
                 }
             }
-        },0,1000,TimeUnit.MILLISECONDS);
+        },0,10,TimeUnit.MILLISECONDS);
     }
 
     class Request{
