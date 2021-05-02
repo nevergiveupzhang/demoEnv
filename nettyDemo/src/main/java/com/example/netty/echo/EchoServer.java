@@ -40,22 +40,25 @@ public final class EchoServer {
 
         try {
             ServerBootstrap b = new ServerBootstrap();
-            ((ServerBootstrap)((ServerBootstrap)((ServerBootstrap)b.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class)).option(ChannelOption.SO_BACKLOG, 100)).handler(new LoggingHandler(LogLevel.INFO))).childHandler(new ChannelInitializer<SocketChannel>() {
-                public void initChannel(SocketChannel ch) throws Exception {
-                    ChannelPipeline p = ch.pipeline();
-                    if (sslCtx != null) {
-                        p.addLast(new ChannelHandler[]{sslCtx.newHandler(ch.alloc())});
-                    }
+            b.group(bossGroup, workerGroup)
+                    .channel(NioServerSocketChannel.class)
+                    .option(ChannelOption.SO_BACKLOG, 100)
+                    .handler(new LoggingHandler(LogLevel.INFO))
+                    .childHandler(new ChannelInitializer<SocketChannel>() {
+                        public void initChannel(SocketChannel ch) throws Exception {
+                            ChannelPipeline p = ch.pipeline();
+                            if (sslCtx != null) {
+                                p.addLast(new ChannelHandler[]{sslCtx.newHandler(ch.alloc())});
+                            }
 
-                    p.addLast(new ChannelHandler[]{serverHandler});
-                }
-            });
+                            p.addLast(new ChannelHandler[]{serverHandler});
+                        }
+                    });
             ChannelFuture f = b.bind(PORT).sync();
             f.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
-
     }
 }
