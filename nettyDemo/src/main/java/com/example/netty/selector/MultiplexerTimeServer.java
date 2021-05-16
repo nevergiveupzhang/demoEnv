@@ -49,7 +49,7 @@ public class MultiplexerTimeServer implements Runnable {
     public void run() {
         while (!stop) {//轮询多路复用器Selctor，处理多个客户端的并发接入或写入
             try {
-                selector.select(1000);
+                selector.select();
                 Set<SelectionKey> selectedKeys = selector.selectedKeys();
                 Iterator<SelectionKey> it = selectedKeys.iterator();
                 SelectionKey key = null;
