@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.github.miemiedev.mybatis.paginator.domain.PageBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -74,7 +75,7 @@ public class UserController {
 		Map<String,Object> params=new HashMap<String,Object>();
 		params.put("name", name);
 		params.put("age", age);
-		List<User> users = userService.getUsers(params);
+		List<User> users = userService.getUsers(params,new PageBounds(1,1));
 		System.out.println(users.toString());
 		return users.toString();
 	}
